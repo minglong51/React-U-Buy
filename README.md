@@ -1,1 +1,1 @@
-# React-U-Buy An web application just start developing
+# React-U-Buy an web application in develop phase.
