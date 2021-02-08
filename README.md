@@ -1,1 +1,1 @@
-# React-U-Buy an web application in develop phase.
+# React-U-Buy: a web application in develop phase.
