@@ -1,0 +1,20 @@
+.App-header {
+    background-color: #6ea0a2;
+    color: white;
+    height: 50px;
+}
+
+.App-title {
+    padding-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.logout {
+    float: right;
+    padding-top: 13px;
+    padding-right: 13px;
+    color: black;
+    font-weight: bold;
+}

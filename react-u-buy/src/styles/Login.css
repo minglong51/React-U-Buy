@@ -1,0 +1,15 @@
+.login-title{
+    margin-top: 150px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login-form {
+    margin-top: 180px;
+    margin-left: 600px;
+    width: 300px;
+}
+
+.login-form-button {
+    width: 300px;
+}
