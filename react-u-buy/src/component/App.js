@@ -10,7 +10,8 @@ class App extends Component {
         //current: 'Machine',
         user: [],
         location: [],
-        isLoggedIn:Boolean(localStorage.getItem(TOKEN_KEY)),
+        isLoggedIn : true,
+        //isLoggedIn:Boolean(localStorage.getItem(TOKEN_KEY)),
     };
 
     handleLoginSucceed = (token) => {
@@ -75,7 +76,6 @@ class App extends Component {
                        user={this.state.user}
                        location={this.state.location}
                 />
-
             </div>
 
         );

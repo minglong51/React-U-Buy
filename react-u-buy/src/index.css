@@ -3,6 +3,7 @@
 @import './styles/TopBar.css';
 @import "./styles/Main.css";
 @import "./styles/Login.css";
+@import "./styles/LikedGames.css";
 
 body {
   margin: 0;
