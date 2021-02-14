@@ -20,7 +20,7 @@ class Main extends Component {
     }
     getLikedGame = () => {
         console.log(this.props.data)
-        return true ?
+        return this.props.isLoggedIn ?
             <LikedGames data={this.props.data}
             user={this.props.user}
             location={this.props.location}/> : <Redirect to = "/login"/>;
