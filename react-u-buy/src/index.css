@@ -4,6 +4,7 @@
 @import "./styles/Main.css";
 @import "./styles/Login.css";
 @import "./styles/LikedGames.css";
+@import "./styles/Register.css";
 
 body {
   margin: 0;

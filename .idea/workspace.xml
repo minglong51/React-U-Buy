@@ -20,31 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b3b3b4-2c4a-42ec-8f37-4835e04a7e7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/Game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/LikedGames.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/List.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/Main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/TopBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/styles/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/styles/Machine.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/styles/Main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/styles/TopBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-u-buy/src/styles/Register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/styles/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-u-buy/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -71,6 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/react-u-buy/src" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -140,5 +123,17 @@
       <screen x="0" y="23" width="1792" height="1061" />
     </state>
     <state width="949" height="255" key="GridCell.Tab.0.right/0.23.1792.1061@0.23.1792.1061" timestamp="1612759804988" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/react-u-buy/src/component/Main.js</url>
+          <line>37</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

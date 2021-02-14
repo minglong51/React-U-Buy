@@ -17,7 +17,7 @@ class App extends Component {
     handleLoginSucceed = (token) => {
         console.log('token --- ', token)
         localStorage.setItem(TOKEN_KEY, token)
-        this.setState({ isLoggedIn: true });
+        this.setState({ isLoggedIn: false});
     }
 
     handleLogout = () => {

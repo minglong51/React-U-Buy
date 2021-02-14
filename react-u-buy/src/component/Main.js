@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { Login } from './Login';
 import LikedGames from './LikedGames';
 import  Home  from './Home';
+import {Register} from './Register';
 
 class Main extends Component {
 
@@ -19,10 +20,16 @@ class Main extends Component {
     }
     getLikedGame = () => {
         console.log(this.props.data)
-        return this.props.isLoggedIn ?
+        return true ?
             <LikedGames data={this.props.data}
             user={this.props.user}
             location={this.props.location}/> : <Redirect to = "/login"/>;
+    }
+    getRegister = () => {
+        console.log(this.props.data)
+        return <Register data={this.props.data}
+                      user={this.props.user}
+                      location={this.props.location}/> ;
     }
 
     render() {
@@ -32,7 +39,8 @@ class Main extends Component {
                     <Route path="/login" render={this.getLogin}/>
                     <Route path="/home" render={this.getMachine}/>
                     <Route path="/likedgame" render={this.getLikedGame}/>
-                    <Route render={this.getLogin}/>
+                    <Route path="/register" render={this.getRegister}/>
+                    <Route render={this.getRegister}/>
                 </Switch>
                 <p className="footnote">Opt-U-Buy Application, Mailing Address: dddmb@foxmail.com, Opt-U-Buy 2021 Project</p>
             </div>
