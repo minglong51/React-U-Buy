@@ -1,20 +1,28 @@
 .App-header {
-    background-color: #6ea0a2;
+    background-color: #7B61FF;
     color: white;
     height: 50px;
+  
 }
 
-.App-title {
-    padding-top: 15px;
-    font-size: 30px;
+.heart {
+    float: right;
+    padding-top: 13px;
+    padding-right: 13px;
     font-weight: bold;
-    color: black;
+    color:white;
 }
 
 .logout {
     float: right;
     padding-top: 13px;
     padding-right: 13px;
-    color: black;
+    color: white;
     font-weight: bold;
+}
+.controller{
+    height:30px;
+    width:50px;
+    margin-left: 20px;
+    float: left;
 }

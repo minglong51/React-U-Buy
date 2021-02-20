@@ -1,0 +1,70 @@
+
+.TagsMain {
+
+    position: relative;
+    height: 760px;
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+.TagsText {
+    display: block;
+    height:150px;
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 20px;
+    /* or 56% */
+
+    display: flex;
+    align-items: center;
+    color:#7B64D8;
+
+}
+
+.TagsSelection {
+
+    display: block;
+    height:700px;
+    font-size: large;
+    justify-content: space-evenly;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.Tag {
+
+        height: 40px;
+        width: wrap-content;
+        padding-top: 8px;
+        font-size: x-large;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 10px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+
+
+}
+.recommendBtn {
+    align-self: end;
+    background-color: #1890FF;
+    border-radius: 4px;
+    font-size: x-large;
+    
+}
+
+.recommendBtnContainer{
+
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 80px;
+    margin-top: 50px;
+    color: #FFFFFF;
+    
+    
+}

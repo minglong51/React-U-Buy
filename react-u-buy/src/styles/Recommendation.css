@@ -1,0 +1,38 @@
+.RecommendationHeaderTags {
+
+    display:flex;
+    height:60px;
+    color:red;
+    margin-top: 0px;
+    align-items: left;
+}
+
+.RecommendationHeaderText {
+    display:flex;
+    height:50px;
+    color: #7B61FF;
+    margin-left: 10px;
+    align-items: left;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.RecommendationCards {
+    margin-top:20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.RecommendationTag {
+    font-size: small;
+    height: 30px;
+    width: wrap-content;
+    padding-top: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+}

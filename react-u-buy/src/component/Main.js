@@ -4,6 +4,8 @@ import { Login } from './Login';
 import LikedGames from './LikedGames';
 import  Home  from './Home';
 import {Register} from './Register';
+import TagsSelection from './TagsSelection';
+import Recommendation from './Recommendation';
 
 class Main extends Component {
 
@@ -32,6 +34,14 @@ class Main extends Component {
                       location={this.props.location}/> ;
     }
 
+    getTagsSelection = () => {
+        return  <TagsSelection />;
+    }
+
+    getRecommendation = () => {
+        return  <Recommendation />;
+    }
+
     render() {
         return (
             <div className="main">
@@ -40,6 +50,8 @@ class Main extends Component {
                     <Route path="/home" render={this.getMachine}/>
                     <Route path="/likedgame" render={this.getLikedGame}/>
                     <Route path="/register" render={this.getRegister}/>
+                    <Route path="/tags" render={this.getTagsSelection}/>
+                    <Route path="/recommendation" render={this.getRecommendation}/>
                     <Route render={this.getRegister}/>
                 </Switch>
                 <p className="footnote">Opt-U-Buy Application, Mailing Address: dddmb@foxmail.com, Opt-U-Buy 2021 Project</p>
