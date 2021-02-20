@@ -22,3 +22,9 @@
     color: white;
     font-weight: bold;
 }
+.controller{
+    height:30px;
+    width:50px;
+    margin-left: 20px;
+    float: left;
+}

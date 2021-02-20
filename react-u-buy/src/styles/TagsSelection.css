@@ -46,6 +46,25 @@
         margin-right: 20px;
         margin-bottom: 20px;
         margin-top: 10px;
+        border-radius: 2px;
 
 
+}
+.recommendBtn {
+    align-self: end;
+    background-color: #1890FF;
+    border-radius: 4px;
+    font-size: x-large;
+    
+}
+
+.recommendBtnContainer{
+
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 80px;
+    margin-top: 50px;
+    color: #FFFFFF;
+    
+    
 }
