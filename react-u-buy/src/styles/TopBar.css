@@ -5,14 +5,12 @@
   
 }
 
-
-
 .heart {
     float: right;
     padding-top: 13px;
     padding-right: 13px;
-    color: white;
     font-weight: bold;
+    color:white;
 }
 
 .logout {

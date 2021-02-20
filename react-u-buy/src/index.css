@@ -6,6 +6,8 @@
 @import "./styles/LikedGames.css";
 @import "./styles/Register.css";
 @import "./styles/TagsSelection.css";
+@import "./styles/Recommendation.css";
+
 
 body {
   margin: 0;

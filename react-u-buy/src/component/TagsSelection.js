@@ -27,10 +27,11 @@ class TagsSelection extends Component {
                     <Tag color="red" className="Tag">magenta</Tag>
                     <Tag color="orange" className="Tag">magenta</Tag>
                     <Tag color="purple" className="Tag">magenta</Tag>
+                    <div className="recommendBtnContainer">
+                        <button className="recommendBtn">Recommend!</button>
+                    </div> 
                 </div>
-                <div className="recommendBtnContainer">
-                    <button className="recommendBtn">Recommend!</button>
-                </div>             
+                            
                 </div>
                 
              </div>    

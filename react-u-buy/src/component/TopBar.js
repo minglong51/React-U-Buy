@@ -15,7 +15,7 @@ class TopBar extends Component {
                     </a> : null }
                 {this.props.isLoggedIn ?
                       <a className="heart">
-                      <Icon type="heart"/>{' '}Liked Games
+                      <Icon type="heart" />{' '}Liked Games
                      </a>: null }
             </header>
         );
