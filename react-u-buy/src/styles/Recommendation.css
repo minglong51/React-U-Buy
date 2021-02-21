@@ -36,3 +36,32 @@
     margin-top: 10px;
     border-radius: 2px;
 }
+
+.Recommendation {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.GameRecommendation {
+    display:flex;
+    height:50px;
+    color: #7B61FF;
+    margin-left: 10px;
+    align-items: left;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.Card {
+    background: #F6F4FF;
+    border: 1px solid #D9D9D9;
+}
+
+.MoreGameButton {
+    float: right;
+    margin-right: 5%;
+    margin-top: 2%;
+    font-size: large;
+    color:white;
+    background-color: #4CAF50;
+}

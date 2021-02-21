@@ -12,7 +12,7 @@ class LikedGames extends Component {
     this.state = {likedGames: []};
   }
 
-  componentDidMount = () => {
+  getLikedGames = () => {
     const url = '/products?page=4&page_size=3';
     axios.get(url)
        .then(response => {
@@ -33,6 +33,10 @@ class LikedGames extends Component {
            console.log('err in fetch products -> ', error);
        })
 
+  }
+
+  componentDidMount = () => {
+    this.getLikedGames();
   }
 
   render() {
