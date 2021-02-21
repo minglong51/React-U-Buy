@@ -45,6 +45,7 @@ class Main extends Component {
     render() {
         return (
             <div className="main">
+                <div className="Component">
                 <Switch>
                     <Route path="/login" render={this.getLogin}/>
                     <Route path="/home" render={this.getMachine}/>
@@ -54,7 +55,9 @@ class Main extends Component {
                     <Route path="/recommendation" render={this.getRecommendation}/>
                     <Route render={this.getRegister}/>
                 </Switch>
-                <p className="footnote">Opt-U-Buy Application, Mailing Address: dddmb@foxmail.com, Opt-U-Buy 2021 Project</p>
+                </div>
+               
+                <div className="footnote">Opt-U-Buy Application, Mailing Address: dddmb@foxmail.com, Opt-U-Buy 2021 Project</div>
             </div>
         );
     }
