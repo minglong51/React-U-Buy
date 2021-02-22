@@ -10,14 +10,14 @@ class App extends Component {
         //current: 'Machine',
         user: [],
         location: [],
-        isLoggedIn : true,
+        isLoggedIn : false,
         //isLoggedIn:Boolean(localStorage.getItem(TOKEN_KEY)),
     };
 
     handleLoginSucceed = (token) => {
         console.log('token --- ', token)
         localStorage.setItem(TOKEN_KEY, token)
-        this.setState({ isLoggedIn: false});
+        this.setState({ isLoggedIn: true});
     }
 
     handleLogout = () => {
@@ -26,7 +26,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.getGameFromDb();
+        // this.getGameFromDb();
 
     }
 
@@ -37,9 +37,9 @@ class App extends Component {
     // 我们的第一个使用后端api的get方法
     // 从我们的数据库中获取数据
     getGameFromDb = () => {
-        fetch('')
-            .then((data) => data.json())
-            .then((res) => this.setState({ data: ""}));
+        // fetch('')
+        //     .then((data) => data.json())
+        //     .then((res) => this.setState({ data: ""}));
     };
 
 

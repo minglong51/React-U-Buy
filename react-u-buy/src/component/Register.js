@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import { Form, Icon, Input, Button, message} from 'antd';
+import { Form, Icon, Input, Button, message, Upload} from 'antd';
 import { Link } from 'react-router-dom';
 import { API_ROOT } from '../constants'
+import {UploadOutlined} from '@ant-design/icons';
 
 
 class NormalRegisterForm extends Component {
@@ -45,14 +46,22 @@ class NormalRegisterForm extends Component {
             }
         });
     };
+    normFile = (e) => {
+        console.log('Upload event:', e);
 
+        if (Array.isArray(e)) {
+            return e;
+        }
+
+        return e && e.fileList;
+    };
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
             <Form onSubmit={this.handleSubmit} className="register-form">
-                <p className= "register-title">Register
+                <p className= "register-title">
                 </p>
-                <Form.Item>
+                <Form.Item class={"login-form-item"}>
                     {getFieldDecorator('username', {
                         rules: [{ required: true, message: 'Please input your username!' }],
                     })(
@@ -62,7 +71,7 @@ class NormalRegisterForm extends Component {
                         />,
                     )}
                 </Form.Item>
-                <Form.Item>
+                <Form.Item class={"login-form-item"}>
                     {getFieldDecorator('password', {
                         rules: [{ required: true, message: 'Please input your Password!' }],
                     })(
@@ -73,7 +82,7 @@ class NormalRegisterForm extends Component {
                         />,
                     )}
                 </Form.Item>
-                <Form.Item>
+                <Form.Item class={"login-form-item"}>
                     {getFieldDecorator('email', {
                         rules: [{ required: true, message: 'Please input your Email!' }],
                     })(
@@ -84,18 +93,29 @@ class NormalRegisterForm extends Component {
                         />,
                     )}
                 </Form.Item>
-                <Form.Item>
-                    {getFieldDecorator('photoUrl', {
-                        rules: [{ required: true, message: 'Please input your photoUrl!' }],
-                    })(
-                        <Input
-                            prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                            type="photoUrl"
-                            placeholder="PhotoUrl"
-                        />,
-                    )}
+                {/*<Form.Item class={"login-form-item"}>*/}
+                {/*    {getFieldDecorator('photoUrl', {*/}
+                {/*        rules: [{ required: true, message: 'Please input your photoUrl!' }],*/}
+                {/*    })(*/}
+                {/*        <Input*/}
+                {/*            prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}*/}
+                {/*            type="photoUrl"*/}
+                {/*            placeholder="PhotoUrl"*/}
+                {/*        />*/}
+                {/*    )}*/}
+                {/*</Form.Item>*/}
+                <Form.Item
+                    name="upload"
+                    label="Upload"
+                    valuePropName="fileList"
+                    getValueFromEvent={this.normFile}
+                    extra=""
+                >
+                    <Upload name="logo" action="/upload.do" listType="picture">
+                        <Button icon={<UploadOutlined />}>Click to upload</Button>
+                    </Upload>
                 </Form.Item>
-                <Form.Item>
+                <Form.Item class={"login-form-item"}>
                     <Button type="primary" htmlType="submit" className="register-form-button">
                         Register
                     </Button>

@@ -6,6 +6,7 @@ import  Home  from './Home';
 import {Register} from './Register';
 import TagsSelection from './TagsSelection';
 import Recommendation from './Recommendation';
+import UserProfile from './UserProfile';
 
 class Main extends Component {
 
@@ -27,12 +28,12 @@ class Main extends Component {
             user={this.props.user}
             location={this.props.location}/> : <Redirect to = "/login"/>;
     }
-    getRegister = () => {
-        console.log(this.props.data)
-        return <Register data={this.props.data}
-                      user={this.props.user}
-                      location={this.props.location}/> ;
-    }
+    // getRegister = () => {
+    //     console.log(this.props.data)
+    //     return <Register data={this.props.data}
+    //                   user={this.props.user}
+    //                   location={this.props.location}/> ;
+    // }
 
     getTagsSelection = () => {
         return  <TagsSelection />;
@@ -40,6 +41,9 @@ class Main extends Component {
 
     getRecommendation = () => {
         return  <Recommendation />;
+    }
+    getUserProfile=()=>{
+        return <UserProfile/>;
     }
 
     render() {
@@ -49,15 +53,16 @@ class Main extends Component {
                 <Switch>
                     <Route path="/login" render={this.getLogin}/>
                     <Route path="/home" render={this.getMachine}/>
-                    <Route path="/likedgame" render={this.getLikedGame}/>
-                    <Route path="/register" render={this.getRegister}/>
+                    <Route path="/likedgames" render={this.getLikedGame}/>
+                    {/*<Route path="/register" render={this.getRegister}/>*/}
                     <Route path="/tags" render={this.getTagsSelection}/>
-                    <Route path="/recommendation" render={this.getRecommendation}/>
-                    <Route render={this.getRegister}/>
+                    <Route path="/user" render={this.getUserProfile}/>
+                    <Route render={this.getLogin}/>
                 </Switch>
                 </div>
                
-                <div className="footnote">Opt-U-Buy Application, Mailing Address: dddmb@foxmail.com, Opt-U-Buy 2021 Project</div>
+                {this.props.isLoggedIn ? <div className="footnote">Opt-U-Buy Application, Mailing Address: dddmb@foxmail.com, Opt-U-Buy 2021 Project</div>:
+                    <div></div>}
             </div>
         );
     }

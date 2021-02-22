@@ -20,12 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b3b3b4-2c4a-42ec-8f37-4835e04a7e7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/styles/Register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-u-buy/src/component/UserProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Recommendation.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Recommendation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/TopBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/styles/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/styles/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/styles/Register.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -101,6 +105,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="333" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612761209397">
@@ -129,8 +134,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/react-u-buy/src/component/Main.js</url>
-          <line>37</line>
-          <properties lambdaOrdinal="-1" />
+          <line>38</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

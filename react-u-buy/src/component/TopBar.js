@@ -5,7 +5,9 @@ import controller2  from '../assets/controller2.svg';
 class TopBar extends Component {
     render() {
         return (
-            <header className="App-header">
+            <div>
+            {this.props.isLoggedIn ?<header className="App-header">
+
                 <div className="controller">
                 <img src={controller2} className="App-logo" alt="logo" />
                 </div>
@@ -17,7 +19,8 @@ class TopBar extends Component {
                       <a className="heart">
                       <Icon type="heart" />{' '}Liked Games
                      </a>: null }
-            </header>
+            </header>:<div></div>}
+                </div>
         );
     }
 }

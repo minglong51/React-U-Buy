@@ -1,15 +1,214 @@
-.login-title{
-    margin-top: 150px;
-    font-size: 30px;
-    font-weight: bold;
+.login-register-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 360px;
+    height: 334px;
+    left: calc(50% - 360px/2);
+    top: calc(50% - 334px/2 - 35.5px);
 }
 
-.login-form {
-    margin-top: 180px;
-    margin-left: 600px;
-    width: 300px;
+.tabs-top{
+    /* tabs-top */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 360px;
+    height: 46px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 22px 0px;
+}
+
+.login_tab{
+    /* components/tab */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 35px;
+    height: 32px;
+    left: 0px;
+    top: 7px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 32px;
+}
+.register_tab{
+    /* components/tab */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 48px;
+    height: 46px;
+    left: 67px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 32px;
+}
+.quick-sign-in-box{
+    display:flex;
+    justify-content:space-evenly;
+    width:300px;
+}
+
+.login-form-item{
+    /* input
+
+ 输入框, Поле ввода
+ */
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+
+    position: static;
+    width: 360px;
+    height: 40px;
+    left: 0px;
+    top: 68px;
+
+    /* Neutral/1 */
+
+    background: #FFFFFF;
+    /* Neutral/5 */
+
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 28px 0px;
 }
 
 .login-form-button {
     width: 300px;
 }
+
+
+.quick-sign-in{
+    position: static;
+    width: 97px;
+    height: 24px;
+    left: 0px;
+    top: 2px;
+
+    /* Subheading 16/regular */
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    text-align: center;
+
+    /* Character/Title .85 */
+
+    color: rgba(0, 0, 0, 0.85);
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-left: -27px;
+}
+.quick-sign-in-icon{
+
+}
+.quick-sign-in-outline{
+    /* Vector */
+
+
+    position: absolute;
+    left: 6.25%;
+    right: 6.25%;
+    top: 6.25%;
+    bottom: 6.25%;
+
+    /* Character/Secondary .45 */
+    margin-left:100px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.sign-up-button{
+    position: static;
+    width: 80px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+
+    /* Subheading 16/regular */
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    text-align: center;
+
+    /* Daybreak Blue/6 */
+
+    color: #1890FF;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
