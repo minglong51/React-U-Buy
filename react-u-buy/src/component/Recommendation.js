@@ -86,9 +86,9 @@ class Recommendation extends Component {
                
                 {items.map(item => this.renderCards(item))}
                 </div>
-                <div className="MoreGameButton">
-                    <Button type="primary" size = "large" onClick={this.getRecommendation}>More Games</Button>
-                </div>
+      
+                <Button type="primary" size = "large" className="MoreGameButton" onClick={this.getRecommendation}>More Games</Button>
+          
                 </div>
         );
     }

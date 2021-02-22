@@ -49,7 +49,6 @@ class LikedGames extends Component {
                     style={{
                         textAlign: 'left',
                         marginTop: 12,
-                        height: 32,
                         lineHeight: '32px',
                       }}
                     dataSource={data}
