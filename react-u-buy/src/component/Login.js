@@ -9,16 +9,21 @@ const {TabPane} = Tabs;
 
 class NormalLoginForm extends Component {
     state = {
-        hasSignUp: false
+        hasSignUp: true
     };
     handleLogin=e=>{
-        e.preventDefault();
-        this.setState((prevstate)=>{return{hasSignUp:!prevstate}});
+        // e.preventDefault();
+        this.setState(pre=>({
+            hasSignUp:!pre.hasSignUp
+        }))
+
     }
-    handleRegister=e=>{
-        e.preventDefault();
-        this.setState({hasSignUp:false});
-    }
+    // handleRegister=e=>{
+    //     e.preventDefault();
+    //     this.setState(pre=>({
+    //         hasSignUp:!pre.hasSignUp
+    //     }))
+    // }
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
@@ -62,9 +67,9 @@ class NormalLoginForm extends Component {
         const {getFieldDecorator} = this.props.form;
         return (
             <div class={"login-register-box"}>
-                <Tabs className={"tabs-top"}>
-                    <TabPane tab="login" className={"login_tab"} onChange={this.handleLogin}></TabPane>
-                    <TabPane tab="signup" className={"register_tab"} onChange={this.handleRegister}></TabPane>
+                <Tabs className={"tabs-top"} defaultActiveKey="1" onChange={this.handleLogin}>
+                    <TabPane tab="login" className={"login_tab"} key={"1"}></TabPane>
+                    <TabPane tab="signup" className={"register_tab"} key ={"2"}></TabPane>
                 </Tabs>
 
                 {this.state.hasSignUp ?
