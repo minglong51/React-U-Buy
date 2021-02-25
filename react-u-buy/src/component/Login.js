@@ -66,7 +66,12 @@ class NormalLoginForm extends Component {
     render() {
         const {getFieldDecorator} = this.props.form;
         return (
-            <div class={"login-register-box"}>
+            <div class={"login-register-page"}>
+                <text class={"login-register-subtitle"}> </text>
+                <text class={"login-register-title"}>Game Recommendation</text>
+
+                <div class={"login-register-box"}>
+
                 <Tabs className={"tabs-top"} defaultActiveKey="1" onChange={this.handleLogin}>
                     <TabPane tab="login" className={"login_tab"} key={"1"}></TabPane>
                     <TabPane tab="signup" className={"register_tab"} key ={"2"}></TabPane>
@@ -117,6 +122,7 @@ class NormalLoginForm extends Component {
                 <WeiboCircleOutlined class={"quick-sign-in-outline"}/>
                 </div>
                 <button className={"sign-up-button"}>Sign Up</button>
+            </div>
             </div>
             </div>
         );

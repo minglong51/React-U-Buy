@@ -1,3 +1,24 @@
+.login-register-title{
+    position: absolute;
+    width: 625px;
+    height: 36px;
+    left: calc(50% - 360px/2 - 120px);
+    top: calc(50% - 334px/2 - 35.5px );
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 20px;
+    /* or 42% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #7B64D8;
+}
+
 .login-register-box{
     display: flex;
     flex-direction: column;
@@ -37,6 +58,7 @@
     flex-grow: 0;
     margin: 22px 0px;
 }
+
 
 .login_tab{
     /* components/tab */

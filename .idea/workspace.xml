@@ -22,6 +22,10 @@
     <list default="true" id="b4b3b3b4-2c4a-42ec-8f37-4835e04a7e7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/UserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/setupProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/styles/Login.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +133,24 @@
           <url>file://$PROJECT_DIR$/react-u-buy/src/component/Main.js</url>
           <line>38</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/react-u-buy/src/component/LikedGames.js</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/react-u-buy/src/component/LikedGames.js</url>
+          <line>18</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/react-u-buy/src/component/LikedGames.js</url>
+          <line>26</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
