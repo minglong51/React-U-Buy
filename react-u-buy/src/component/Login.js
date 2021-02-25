@@ -67,8 +67,13 @@ class NormalLoginForm extends Component {
         const {getFieldDecorator} = this.props.form;
         return (
             <div class={"login-register-page"}>
-                <text class={"login-register-subtitle"}> </text>
+                <text class={"login-register-subtitle"}> OptUbuy</text>
+                <line class={"login-register-line"}></line>
                 <text class={"login-register-title"}>Game Recommendation</text>
+
+                <rainbow class={"login-register-rainbow"}></rainbow>
+                <arcade class={"login-register-arcade"}></arcade>
+                <memphis class={"login-register-memphis"}></memphis>
 
                 <div class={"login-register-box"}>
 

@@ -1,3 +1,38 @@
+.login-register-page{
+    background: #F4F6F7;
+}
+
+.login-register-subtitle{
+    position: absolute;
+    width: 625px;
+    height: 36px;
+    left: 398px;
+    top: 167px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 20px;
+    /* or 83% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #7B61FF;
+}
+
+.login-register-line{
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    left: 695px;
+    top: 231px;
+
+    border: 2px solid #7B61FF;
+}
+
 .login-register-title{
     position: absolute;
     width: 625px;
@@ -17,6 +52,36 @@
     text-align: center;
 
     color: #7B64D8;
+}
+
+.login-register-rainbow{
+    position: absolute;
+    width: 342px;
+    height: 342px;
+    left: 1098px;
+    top: 60px;
+
+    background: url(../assets/rainbow.png);
+}
+
+.login-register-arcade{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 333px;
+    top: 250px;
+
+    background: url(../assets/arcade-machine.png);
+}
+
+.login-register-memphis{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 138px;
+    top: 584px;
+
+    background: url(../assets/memphis-style.png);
 }
 
 .login-register-box{
