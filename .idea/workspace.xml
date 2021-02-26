@@ -20,12 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b3b3b4-2c4a-42ec-8f37-4835e04a7e7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/assets/arcade-machine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/assets/memphis-style.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-u-buy/src/assets/rainbow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-u-buy/src/assets/Ellipse5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-u-buy/src/assets/Ellipse6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-u-buy/src/assets/Ellipse7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-u-buy/src/assets/Ellipse8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-u-buy/src/assets/dinosaur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-u-buy/src/styles/UserProfile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-u-buy/src/styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/styles/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/UserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -126,6 +130,10 @@
       <screen x="0" y="23" width="1792" height="1061" />
     </state>
     <state width="949" height="255" key="GridCell.Tab.0.right/0.23.1792.1061@0.23.1792.1061" timestamp="1612759804988" />
+    <state x="1031" y="315" width="598" height="490" key="find.popup" timestamp="1614317086487">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="1031" y="315" width="598" height="490" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1614317086487" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

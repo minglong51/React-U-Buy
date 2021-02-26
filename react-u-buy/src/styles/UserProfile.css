@@ -1,0 +1,127 @@
+.user_arrow{
+    position: absolute;
+    left: 8.92%;
+    right: 8.93%;
+    top: 10.27%;
+    bottom: 10.27%;
+
+    /* Character/Title .85 */
+
+
+}
+
+.user_arrow_text{
+    position: static;
+    width: 323px;
+    height: 28px;
+    left: 0px;
+    top: 0px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.user_profile_icon{
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    left: 77px;
+    top: 152px;
+
+    background: url(../assets/dinosaur.png);
+}
+
+.user_profile_tittle{
+    /* User Profile */
+
+    position: absolute;
+    width: 424px;
+    height: 22px;
+    left: 145px;
+    top: 170px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 20px;
+    /* or 71% */
+
+
+    color: #7B64D8;
+}
+
+.user_profile_rectangle{
+    position: absolute;
+    width: 1282px;
+    height: 543px;
+    left: 81px;
+    top: 255px;
+
+    background: #F4F8F7;
+    border-radius: 10px;
+}
+
+.user_profile_ellipse8{
+    position: absolute;
+    width: 48px;
+    height: 49px;
+    left: 211px;
+    top: 358px;
+
+    background: url(../assets/Ellipse8.png);
+}
+
+.user_profile_ellipse5{
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    left: 333px;
+    top: 350px;
+
+    background:url(../assets/Ellipse5.png);
+}
+
+.user_profile_ellipse6{
+    position: absolute;
+    width: 113px;
+    height: 113px;
+    left: 182px;
+    top: 516px;
+
+    background:url(../assets/Ellipse6.png);
+}
+
+.user_profile_ellipse7{
+    position: absolute;
+    width: 68px;
+    height: 67px;
+    left: 432px;
+    top: 557px;
+
+    background:url(../assets/Ellipse7.png);
+}
+
+.user_profile_avatar{
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+
+    position: absolute;
+    width: 209px;
+    height: 210px;
+    left: 235px;
+    top: 387px;
+
+    /* Neutral/6 */
+
+    background: #BFBFBF;
+    border-radius: 100px;
+}

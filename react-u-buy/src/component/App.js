@@ -10,7 +10,7 @@ class App extends Component {
         //current: 'Machine',
         user: [],
         location: [],
-        isLoggedIn : false,
+        isLoggedIn : true,
         //isLoggedIn:Boolean(localStorage.getItem(TOKEN_KEY)),
     };
 
