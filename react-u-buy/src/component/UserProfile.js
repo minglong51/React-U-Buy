@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import {List, Avatar } from 'antd';
 import {ArrowLeftOutlined, UserOutlined} from '@ant-design/icons';
 import axios from 'axios';
+import {Redirect} from "react-router-dom";
 
 
 
@@ -39,10 +40,11 @@ class UserProfile extends Component {
 
     }
 
-
+    handleClick = (e)=>{
+        return <Redirect to="/tags"/>;
+    }
     componentDidMount = () => {
         this.getUser();
-
     }
 
     render() {
@@ -60,6 +62,21 @@ class UserProfile extends Component {
                     <Avatar src={this.state.User.photoUrl} className={"user_profile_avatar"}/>
                     <ellipse className={"user_profile_ellipse6"}></ellipse>
                     <ellipse className={"user_profile_ellipse7"}></ellipse>
+
+                    <ellipse className={"user_profile_ellipse1"}></ellipse>
+                    <ellipse className={"user_profile_ellipse2"}></ellipse>
+                    <ellipse className={"user_profile_ellipse3"}></ellipse>
+                    <ellipse className={"user_profile_ellipse4"}></ellipse>
+
+                    <text className={"user_profile_text_name"}>User Name:</text>
+                    <text className={"user_profile_text_email"}>Email Address:</text>
+                    <text className={"user_profile_text_password"}>Password:</text>
+                    <text className={"user_profile_text_game"}>Game Preference:</text>
+
+                    <text className={"user_profile_name"}>{this.state.username}</text>
+                    <text className={"user_profile_email"}>{this.state.username}</text>
+                    <text className={"user_profile_password"}>{this.state.username}</text>
+                    <text className={"user_profile_game"} onClick={this.handleClick}>Edit</text>
                 </div>
             </div>
 
