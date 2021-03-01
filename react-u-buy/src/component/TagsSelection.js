@@ -1,33 +1,65 @@
 import React, { Component } from 'react';
 import { Tag, Divider } from 'antd';
+import controller1  from '../assets/controller1.svg';
+import axios from 'axios';
 
 class TagsSelection extends Component {
     state = {
-        tags: ["RPG", "FPS", "Mystery", "Japanese Anime"],
+        tags: [],
+        colors: ["blue", "yellow", "orange", "magenta","green"],
     }
 
-    render() {
+    getTags = () => {
+        const url = '/genres';
+        axios.get(url)
+           .then(response => {
+               const data = response.data.genres.map((genres) => {
+                 return {
+                          "genreName" : genres.genreName, 
+                          "genreId" : genres.genreId,             
+                        }           
+               })
+               this.setState({
+                 ...this.state, 
+                 tags:data}
+               );
+                console.log(this.state.tags);
+           })
+           .catch(error => {
+               console.log('err in fetch products -> ', error);
+           })
+    
+      }
+    
+      componentDidMount = () => {
+        this.getTags();
+      }
+      renderTags = (item) => { 
+        const {colors} = this.state;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        console.log(color);
+        return (  
+        <Tag key={item.genreName} color={color} className="Tag">{item.genreName}</Tag>
 
+        )}
+
+    render() {
+        const {tags} = this.state;
         return (
             <div className="TagsMain">
-                <div className="TagsText">
-
-                     What kinds of games do you like?
- 
+                <div className="TagsHeader">
+                    <img src={controller1} className="TagsControllerIcon" alt="icon"/>
+                    <div className="TagsText">
+                        What kinds of games do you like?  
+                    </div>
                 </div>
-
                 <div className="TagsSelection">
 
                 <div>
-                    <Tag color="magenta" className="Tag">magenta sfaffsfe eaf</Tag>
-                    <Tag color="blue" className="Tag">magentagsgsgvgsvs</Tag>
-                    <Tag color="yellow" className="Tag">magen sfsg  stgsta</Tag>
-                    <Tag color="blue" className="Tag">mageg snta</Tag>
-                    <Tag color="green" className="Tag">mage sfssnta</Tag>
-                    <Tag color="red" className="Tag">magenta</Tag>
-                    <Tag color="orange" className="Tag">magenta</Tag>
-                    <Tag color="purple" className="Tag">magenta</Tag>
-                    <div className="recommendBtnContainer">
+                    {   
+                        tags.map(tag => this.renderTags(tag))
+                    }
+                <div className="recommendBtnContainer">
                         <button className="recommendBtn">Recommend!</button>
                     </div> 
                 </div>

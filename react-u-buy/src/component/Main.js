@@ -7,6 +7,7 @@ import {Register} from './Register';
 import TagsSelection from './TagsSelection';
 import Recommendation from './Recommendation';
 import UserProfile from './UserProfile';
+import LandingPage from './LandingPage';
 
 class Main extends Component {
 
@@ -22,7 +23,7 @@ class Main extends Component {
     //         location={this.props.location}/> : <Redirect to = "/login"/>;
     // }
     getLikedGame = () => {
-        console.log(this.props.data)
+        // console.log(this.props.data)
         return this.props.isLoggedIn ?
             <LikedGames data={this.props.data}
             user={this.props.user}
@@ -47,6 +48,10 @@ class Main extends Component {
         return <UserProfile/>;
     }
 
+    getLandingPage = () => {
+        return <LandingPage/>;
+    }
+
     render() {
         return (
             <div className="main">
@@ -57,8 +62,10 @@ class Main extends Component {
                     <Route path="/likedgames" render={this.getLikedGame}/>
                     {/*<Route path="/register" render={this.getRegister}/>*/}
                     <Route path="/tags" render={this.getTagsSelection}/>
+                    <Route path="/recommendation" render={this.getRecommendation}/>
                     <Route path="/user" render={this.getUserProfile}/>
-                    <Route render={this.getLogin}/>
+                    <Route path="/landing" render={this.getLandingPage}/>
+                    <Route path="/" render={this.getLogin}/>
                 </Switch>
                 </div>
                

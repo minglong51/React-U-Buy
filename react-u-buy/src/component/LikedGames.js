@@ -2,7 +2,9 @@ import React, {useState, Component} from 'react';
 import 'antd/dist/antd.css';
 import {List, Avatar } from 'antd';
 import axios from 'axios';
-
+import gameBoy  from '../assets/gameBoy.svg';
+import arrow  from '../assets/arrow.svg';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,7 +22,7 @@ class LikedGames extends Component {
              return {
                       "productName" : product.productName,
                       "purchaseURL"  :product.purchaseUrl,
-                      "productDescription" :product.productDescription,
+                      "productDescription" :"This is an awesome game, hope you like it!",
                       "imageUrls" : product.imageUrls.split(","),
                     }           
            })
@@ -28,6 +30,7 @@ class LikedGames extends Component {
              ...this.state, 
             likedGames:data}
            );
+          //  console.log(data);
        })
        .catch(error => {
            console.log('err in fetch products -> ', error);
@@ -44,6 +47,13 @@ class LikedGames extends Component {
 
         return (
             <div className='LikedGames'>
+                <div className='LikedGamesTop'>
+                  <div> <img src={arrow} alt="icon"/> <Link to="/about">Back to game recommendation</Link> </div>
+                  <div className='LikedGamesTitle'>
+                     <img src={gameBoy} alt="icon"/>
+                    <div>Liked Game List</div>
+                  </div>
+                </div>
                 <List
                     itemLayout="vertical"
                     style={{
@@ -70,7 +80,7 @@ class LikedGames extends Component {
                     >
                        
                         <List.Item.Meta
-                            title={<a href="https://ant.design">{item.productName}</a>}
+                            title={<a href={item.purchaseURL}>{item.productName}</a>}
                             description={item.productDescription}
                             
                         />
