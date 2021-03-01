@@ -3,6 +3,10 @@
 }
 
 .footnote {
+    position:absolute;
+    left: calc(50% - 360px/2 - 120px);
+    top: calc(100% - 100px/2 );
+
     margin-top: 1%;
     padding-bottom: 1%;
 }

@@ -2,8 +2,8 @@
     position: absolute;
     left: 8.92%;
     right: 8.93%;
-    top: 10.27%;
-    bottom: 10.27%;
+    left: calc(50% - 360px/2 - 1100px);
+    top: calc(50% - 334px/2 - 230px);
 
     /* Character/Title .85 */
 
@@ -11,11 +11,11 @@
 }
 
 .user_arrow_text{
-    position: static;
+    position: absolute;
     width: 323px;
     height: 28px;
-    left: 0px;
-    top: 0px;
+    left: calc(50% - 360px/2 - 220px);
+    top: calc(50% - 334px/2 - 235px);
 
     font-family: Poppins;
     font-style: normal;
@@ -28,8 +28,8 @@
     position: absolute;
     width: 58px;
     height: 58px;
-    left: 77px;
-    top: 152px;
+    left: calc(50% - 360px/2 - 270px);
+    top: calc(50% - 334px/2 - 150px);
 
     background: url(../assets/dinosaur.png);
 }
@@ -40,8 +40,8 @@
     position: absolute;
     width: 424px;
     height: 22px;
-    left: 145px;
-    top: 170px;
+    left: calc(50% - 360px/2 - 330px);
+    top: calc(50% - 334px/2 - 130px);
 
     font-family: Poppins;
     font-style: normal;
