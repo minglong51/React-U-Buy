@@ -13,15 +13,15 @@ class Main extends Component {
 
     getLogin = () => {
         return this.props.isLoggedIn ?
-            <Redirect to="/home"/> : <Login handleLoginSucceed={this.props.handleLoginSucceed}/>;
+            <Redirect to="/tags"/> : <Login handleLoginSucceed={this.props.handleLoginSucceed}/>;
     }
-    getMachine = () => {
-        // console.log(this.props.data)
-        return this.props.isLoggedIn ?
-            <Home data={this.props.data}
-            user={this.props.user}
-            location={this.props.location}/> : <Redirect to = "/login"/>;
-    }
+    // getMachine = () => {
+    //     console.log(this.props.data)
+    //     return this.props.isLoggedIn ?
+    //         <Home data={this.props.data}
+    //         user={this.props.user}
+    //         location={this.props.location}/> : <Redirect to = "/login"/>;
+    // }
     getLikedGame = () => {
         // console.log(this.props.data)
         return this.props.isLoggedIn ?
@@ -43,6 +43,7 @@ class Main extends Component {
     getRecommendation = () => {
         return  <Recommendation />;
     }
+
     getUserProfile=()=>{
         return <UserProfile/>;
     }
@@ -57,7 +58,7 @@ class Main extends Component {
                 <div className="Component">
                 <Switch>
                     <Route path="/login" render={this.getLogin}/>
-                    <Route path="/home" render={this.getMachine}/>
+                    {/*<Route path="/home" render={this.getMachine}/>*/}
                     <Route path="/likedgames" render={this.getLikedGame}/>
                     {/*<Route path="/register" render={this.getRegister}/>*/}
                     <Route path="/tags" render={this.getTagsSelection}/>
