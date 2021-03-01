@@ -81,14 +81,14 @@ class Recommendation extends Component {
                     <Tag color="yellow" className="RecommendationTag">Collaborate</Tag>
                 </div>
                 <div className="GameRecommendation">
-                <img src={controller4} alt="icon"/> Another Round
+                <img src={controller4} alt="icon"/> Game Recommendation
                 </div>
                 <div className="RecommendationCards">
                
                 {items.map(item => this.renderCards(item))}
                 </div>
       
-                <Button type="primary" size = "large" className="MoreGameButton" onClick={this.getRecommendation}>More Games</Button>
+                <Button type="primary" size = "large" className="MoreGameButton" onClick={this.getRecommendation}>Another Round</Button>
           
                 </div>
         );

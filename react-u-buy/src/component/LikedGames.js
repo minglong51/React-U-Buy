@@ -4,6 +4,7 @@ import {List, Avatar } from 'antd';
 import axios from 'axios';
 import gameBoy  from '../assets/gameBoy.svg';
 import arrow  from '../assets/arrow.svg';
+import { Link } from 'react-router-dom';
 
 
 
@@ -47,7 +48,7 @@ class LikedGames extends Component {
         return (
             <div className='LikedGames'>
                 <div className='LikedGamesTop'>
-                  <div> <img src={arrow} alt="icon"/> Back to game recommendation</div>
+                  <div> <img src={arrow} alt="icon"/> <Link to="/about">Back to game recommendation</Link> </div>
                   <div className='LikedGamesTitle'>
                      <img src={gameBoy} alt="icon"/>
                     <div>Liked Game List</div>

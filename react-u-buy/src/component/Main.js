@@ -62,9 +62,10 @@ class Main extends Component {
                     <Route path="/likedgames" render={this.getLikedGame}/>
                     {/*<Route path="/register" render={this.getRegister}/>*/}
                     <Route path="/tags" render={this.getTagsSelection}/>
+                    <Route path="/recommendation" render={this.getRecommendation}/>
                     <Route path="/user" render={this.getUserProfile}/>
                     <Route path="/landing" render={this.getLandingPage}/>
-                    <Route render={this.getLogin}/>
+                    <Route path="/" render={this.getLogin}/>
                 </Switch>
                 </div>
                

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Icon } from 'antd';
 import heart  from '../assets/heart.svg';
 import controller2  from '../assets/controller2.svg';
+import { Link } from 'react-router-dom';
 class TopBar extends Component {
     render() {
         return (
@@ -14,7 +15,7 @@ class TopBar extends Component {
                     </a> : null }
                 {this.props.isLoggedIn ?
                       <a className="heart">
-                      <Icon type="heart" />{' '}Liked Games
+                      <Link className="TopBarLikeGame" to="/likedgames"><Icon type="heart" />{' '}Liked Games</Link>
                      </a>: null }
             </header>:<div></div>}
                 </div>
