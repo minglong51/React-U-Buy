@@ -3,3 +3,18 @@
     padding-right: 150px;
     padding-left: 150px;
 }
+
+.LikedGamesTop {
+    display: block;
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+    color:#7B64D8;
+}
+
+.LikedGamesTitle {
+    margin-top: 1%;
+    display: flex;
+    font-size: xx-large;
+    font-weight: bold;
+}

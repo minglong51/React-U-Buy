@@ -68,3 +68,12 @@
     
     
 }
+
+.TagsControllerIcon{
+    display: inline-block;
+    margin-right: 1%;
+}
+
+.TagsHeader {
+    display: flex;
+}

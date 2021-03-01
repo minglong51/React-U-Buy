@@ -8,9 +8,6 @@ class TopBar extends Component {
             <div>
             {this.props.isLoggedIn ?<header className="App-header">
 
-                <div className="controller">
-                <img src={controller2} className="App-logo" alt="logo" />
-                </div>
                 {this.props.isLoggedIn ?
                     <a className="logout" onClick={this.props.handleLogout} >
                         <Icon type="logout"/>{' '}Logout

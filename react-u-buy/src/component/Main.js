@@ -7,6 +7,7 @@ import {Register} from './Register';
 import TagsSelection from './TagsSelection';
 import Recommendation from './Recommendation';
 import UserProfile from './UserProfile';
+import LandingPage from './LandingPage';
 
 class Main extends Component {
 
@@ -15,14 +16,14 @@ class Main extends Component {
             <Redirect to="/home"/> : <Login handleLoginSucceed={this.props.handleLoginSucceed}/>;
     }
     getMachine = () => {
-        console.log(this.props.data)
+        // console.log(this.props.data)
         return this.props.isLoggedIn ?
             <Home data={this.props.data}
             user={this.props.user}
             location={this.props.location}/> : <Redirect to = "/login"/>;
     }
     getLikedGame = () => {
-        console.log(this.props.data)
+        // console.log(this.props.data)
         return this.props.isLoggedIn ?
             <LikedGames data={this.props.data}
             user={this.props.user}
@@ -46,6 +47,10 @@ class Main extends Component {
         return <UserProfile/>;
     }
 
+    getLandingPage = () => {
+        return <LandingPage/>;
+    }
+
     render() {
         return (
             <div className="main">
@@ -57,6 +62,7 @@ class Main extends Component {
                     {/*<Route path="/register" render={this.getRegister}/>*/}
                     <Route path="/tags" render={this.getTagsSelection}/>
                     <Route path="/user" render={this.getUserProfile}/>
+                    <Route path="/landing" render={this.getLandingPage}/>
                     <Route render={this.getLogin}/>
                 </Switch>
                 </div>
