@@ -53,30 +53,30 @@ class UserProfile extends Component {
         return (
             <div className='User_Profile'>
                 <ArrowLeftOutlined className={"user_arrow"}></ArrowLeftOutlined>
-                <text className={"user_arrow_text"}>Back to game recommendation</text>
-                <dinosaur className={"user_profile_icon"}></dinosaur>
-                <text className={"user_profile_tittle"}>User Profile</text>
+                <p className={"user_arrow_text"}>Back to game recommendation</p>
+                <div className={"user_profile_icon"}></div>
+                <p className={"user_profile_tittle"}>User Profile</p>
                 <div className={"user_profile_rectangle"}>
-                    <ellipse className={"user_profile_ellipse8"}></ellipse>
-                    <ellipse className={"user_profile_ellipse5"}></ellipse>
+                    <div className={"user_profile_ellipse8"}></div>
+                    <div className={"user_profile_ellipse5"}></div>
                     <Avatar src={"https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860-dragon-header-iStock-494839519.gif"} className={"user_profile_avatar"}/>
-                    <ellipse className={"user_profile_ellipse6"}></ellipse>
-                    <ellipse className={"user_profile_ellipse7"}></ellipse>
+                    <div className={"user_profile_ellipse6"}></div>
+                    <div className={"user_profile_ellipse7"}></div>
 
-                    <ellipse className={"user_profile_ellipse1"}></ellipse>
-                    <ellipse className={"user_profile_ellipse2"}></ellipse>
-                    <ellipse className={"user_profile_ellipse3"}></ellipse>
-                    <ellipse className={"user_profile_ellipse4"}></ellipse>
+                    <div className={"user_profile_ellipse1"}></div>
+                    <div className={"user_profile_ellipse2"}></div>
+                    <div className={"user_profile_ellipse3"}></div>
+                    <div className={"user_profile_ellipse4"}></div>
 
-                    <text className={"user_profile_text_name"}>User Name:</text>
-                    <text className={"user_profile_text_email"}>Email Address:</text>
-                    <text className={"user_profile_text_password"}>Password:</text>
-                    <text className={"user_profile_text_game"}>Game Preference:</text>
+                    <p className={"user_profile_text_name"}>User Name:</p>
+                    <p className={"user_profile_text_email"}>Email Address:</p>
+                    <p className={"user_profile_text_password"}>Password:</p>
+                    <p className={"user_profile_text_game"}>Game Preference:</p>
 
-                    <text className={"user_profile_name"}>{this.state.username}</text>
-                    <text className={"user_profile_email"}>{this.state.username}</text>
-                    <text className={"user_profile_password"}>{this.state.username}</text>
-                    <text className={"user_profile_game"} onClick={this.handleClick}>Edit</text>
+                    <p className={"user_profile_name"}>{this.state.username}</p>
+                    <p className={"user_profile_email"}>{this.state.username}</p>
+                    <p className={"user_profile_password"}>{this.state.username}</p>
+                    <div className={"user_profile_game"} onClick={this.handleClick}>Edit</div>
                 </div>
             </div>
 

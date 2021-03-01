@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b3b3b4-2c4a-42ec-8f37-4835e04a7e7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/UserProfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +124,10 @@
       <screen x="0" y="23" width="1792" height="1061" />
     </state>
     <state width="949" height="255" key="GridCell.Tab.0.right/0.23.1792.1061@0.23.1792.1061" timestamp="1612759804988" />
+    <state x="985" y="269" key="RollbackChangesDialog" timestamp="1614566070225">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="985" y="269" key="RollbackChangesDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1614566070225" />
     <state x="1031" y="315" width="598" height="490" key="find.popup" timestamp="1614317086487">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
