@@ -6,8 +6,8 @@
     position: absolute;
     width: 625px;
     height: 36px;
-    left: 398px;
-    top: 167px;
+    left: calc(50% - 360px/2 + 85px);
+    top: calc(50% - 334px/2 - 250px);
 
     font-family: Poppins;
     font-style: normal;
@@ -27,8 +27,8 @@
     position: absolute;
     width: 30px;
     height: 0px;
-    left: 695px;
-    top: 231px;
+    left: calc(50% - 360px/2 + 120px);
+    top: calc(50% - 334px/2 - 170px);
 
     border: 2px solid #7B61FF;
 }
@@ -38,7 +38,7 @@
     width: 625px;
     height: 36px;
     left: calc(50% - 360px/2 - 120px);
-    top: calc(50% - 334px/2 - 35.5px );
+    top: calc(50% - 334px/2 - 100px);
 
     font-family: Poppins;
     font-style: normal;
@@ -58,8 +58,8 @@
     position: absolute;
     width: 342px;
     height: 342px;
-    left: 1098px;
-    top: 60px;
+    left: calc(50% - 360px/2 + 534px);
+    top: calc(50% - 334px/2 - 300px);
 
     background: url(../assets/rainbow.png);
 }
@@ -68,8 +68,8 @@
     position: absolute;
     width: 55px;
     height: 55px;
-    left: 333px;
-    top: 250px;
+    left: calc(50% - 360px/2 - 190px);
+    top: calc(50% - 334px/2 - 110px);
 
     background: url(../assets/arcade-machine.png);
 }
@@ -78,8 +78,8 @@
     position: absolute;
     width: 250px;
     height: 250px;
-    left: 138px;
-    top: 584px;
+    left: calc(50% - 360px/2 - 370px);
+    top: calc(50% - 334px/2 + 334px);
 
     background: url(../assets/memphis-style.png);
 }
@@ -94,7 +94,7 @@
     width: 360px;
     height: 334px;
     left: calc(50% - 360px/2);
-    top: calc(50% - 334px/2 - 35.5px);
+    top: calc(50% - 334px/2 + 0px);
 }
 
 .tabs-top{

@@ -10,7 +10,7 @@ class App extends Component {
         //current: 'Machine',
         user: [],
         location: [],
-        isLoggedIn : true,
+        isLoggedIn : false,
         //isLoggedIn:Boolean(localStorage.getItem(TOKEN_KEY)),
     };
 
@@ -62,9 +62,6 @@ class App extends Component {
     // };
 
     render() {
-
-
-
         return (
             <div className="App">
                 <TopBar handleLogout={this.handleLogout}
