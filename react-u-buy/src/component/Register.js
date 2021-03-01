@@ -55,6 +55,11 @@ class NormalRegisterForm extends Component {
 
         return e && e.fileList;
     };
+
+    handleUpload=(file, fileList, event)=>{
+        console.log(fileList);
+
+    }
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -111,7 +116,7 @@ class NormalRegisterForm extends Component {
                     getValueFromEvent={this.normFile}
                     extra=""
                 >
-                    <Upload name="logo" action="/upload.do" listType="picture">
+                    <Upload name="logo" onchange={this.handleUpload} listType="picture">
                         <Button icon={<UploadOutlined />}>Click to upload</Button>
                     </Upload>
                 </Form.Item>

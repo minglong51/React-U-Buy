@@ -66,16 +66,16 @@ class NormalLoginForm extends Component {
     render() {
         const {getFieldDecorator} = this.props.form;
         return (
-            <div class={"login-register-page"}>
-                <text class={"login-register-subtitle"}> OptUbuy</text>
-                <line class={"login-register-line"}></line>
-                <text class={"login-register-title"}>Game Recommendation</text>
+            <div className={"login-register-page"}>
+                <p className={"login-register-subtitle"}> OptUbuy</p>
+                <div className={"login-register-line"}></div>
+                <p className={"login-register-title"}>Game Recommendation</p>
 
-                <rainbow class={"login-register-rainbow"}></rainbow>
-                <arcade class={"login-register-arcade"}></arcade>
-                <memphis class={"login-register-memphis"}></memphis>
+                <div className={"login-register-rainbow"}></div>
+                <div className={"login-register-arcade"}></div>
+                <div className={"login-register-memphis"}></div>
 
-                <div class={"login-register-box"}>
+                <div className={"login-register-box"}>
 
                 <Tabs className={"tabs-top"} defaultActiveKey="1" onChange={this.handleLogin}>
                     <TabPane tab="login" className={"login_tab"} key={"1"}></TabPane>
@@ -83,9 +83,9 @@ class NormalLoginForm extends Component {
                 </Tabs>
 
                 {this.state.hasSignUp ?
-                    <div class="login_box">
+                    <div className="login_box">
                         <Form onSubmit={this.handleSubmit} className="login-form">
-                            <Form.Item class={"login-form-item"}>
+                            <Form.Item className={""}>
                                 {getFieldDecorator('username', {
                                     rules: [{required: true, message: 'Please input your username!'}],
                                 })(
@@ -95,7 +95,7 @@ class NormalLoginForm extends Component {
                                     />,
                                 )}
                             </Form.Item>
-                            <Form.Item class={"login-form-item"}>
+                            <Form.Item className={""}>
                                 {getFieldDecorator('password', {
                                     rules: [{required: true, message: 'Please input your Password!'}],
                                 })(
@@ -119,12 +119,12 @@ class NormalLoginForm extends Component {
                     </div>}
 
             <div className={"quick-sign-in-box"}>
-                <text className={"quick-sign-in"}>Quick Sign-in</text>
+                <div className={"quick-sign-in"}>Quick Sign-in</div>
                 <div className={"quick-sign-in-icon"}>
 
-                <AlipayCircleOutlined class={"quick-sign-in-outline"}/>
-                <TaobaoCircleOutlined class={"quick-sign-in-outline"}/>
-                <WeiboCircleOutlined class={"quick-sign-in-outline"}/>
+                <AlipayCircleOutlined />
+                <TaobaoCircleOutlined />
+                <WeiboCircleOutlined />
                 </div>
                 <button className={"sign-up-button"}>Sign Up</button>
             </div>
