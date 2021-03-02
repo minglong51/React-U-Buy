@@ -112,8 +112,6 @@ class NormalRegisterForm extends Component {
                 <Form.Item
                     name="upload"
                     label="Upload"
-                    valuePropName="fileList"
-                    getValueFromEvent={this.normFile}
                     extra=""
                 >
                     <Upload name="logo" onchange={this.handleUpload} listType="picture">

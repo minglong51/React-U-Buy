@@ -1,8 +1,7 @@
 .user_arrow{
     position: absolute;
-    left: 8.92%;
-    right: 8.93%;
-    left: calc(50% - 360px/2 - 1100px);
+
+    left: calc(50% - 360px/2 - 520px);
     top: calc(50% - 334px/2 - 230px);
 
     /* Character/Title .85 */
@@ -14,7 +13,7 @@
     position: absolute;
     width: 323px;
     height: 28px;
-    left: calc(50% - 360px/2 - 220px);
+    left: calc(50% - 360px/2 - 490px);
     top: calc(50% - 334px/2 - 235px);
 
     font-family: Poppins;
@@ -22,13 +21,15 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 28px;
+
+    color: #7B64D8;
 }
 
 .user_profile_icon{
     position: absolute;
     width: 58px;
     height: 58px;
-    left: calc(50% - 360px/2 - 270px);
+    left: calc(50% - 360px/2 - 480px);
     top: calc(50% - 334px/2 - 150px);
 
     background: url(../assets/dinosaur.png);
@@ -40,7 +41,7 @@
     position: absolute;
     width: 424px;
     height: 22px;
-    left: calc(50% - 360px/2 - 330px);
+    left: calc(50% - 360px/2 - 550px);
     top: calc(50% - 334px/2 - 130px);
 
     font-family: Poppins;
@@ -58,8 +59,8 @@
     position: absolute;
     width: 1282px;
     height: 543px;
-    left: 81px;
-    top: 255px;
+    left: calc(50% - 360px/2 - 480px);
+    top: calc(50% - 334px/2 - 30px);
 
     background: #F4F8F7;
     border-radius: 10px;
@@ -69,8 +70,8 @@
     position: absolute;
     width: 48px;
     height: 49px;
-    left: 211px;
-    top: 358px;
+    left: calc(50% - 360px/2 - 280px - 24px);
+    top: calc(50% - 334px/2 - 00px - 29px);
 
     background: url(../assets/Ellipse8.png);
 }
@@ -79,8 +80,9 @@
     position: absolute;
     width: 170px;
     height: 170px;
-    left: 333px;
-    top: 350px;
+
+    left: calc(50% - 360px/2 - 280px + 98px);
+    top: calc(50% - 334px/2 - 00px - 37px);
 
     background:url(../assets/Ellipse5.png);
 }
@@ -89,8 +91,8 @@
     position: absolute;
     width: 113px;
     height: 113px;
-    left: 182px;
-    top: 516px;
+    left: calc(50% - 360px/2 - 280px - 53px);
+    top: calc(50% - 334px/2 - 00px + 129px);
 
     background:url(../assets/Ellipse6.png);
 }
@@ -99,8 +101,8 @@
     position: absolute;
     width: 68px;
     height: 67px;
-    left: 432px;
-    top: 557px;
+    left: calc(50% - 360px/2 - 280px + 197px);
+    top: calc(50% - 334px/2 - 00px + 170px);
 
     background:url(../assets/Ellipse7.png);
 }
@@ -108,8 +110,8 @@
     position: absolute;
     width: 13px;
     height: 13px;
-    left: 638px;
-    top: 359px;
+    left: calc(50% - 360px/2 - 280px + 403px);
+    top: calc(50% - 334px/2 - 00px + 9px);
 
     background:url(../assets/Ellipse1.png);
 }
@@ -117,8 +119,8 @@
     position: absolute;
     width: 13px;
     height: 13px;
-    left: 638px;
-    top: 427px;
+    left: calc(50% - 360px/2 - 280px + 403px);
+    top: calc(50% - 334px/2 - 00px + 9px + 68px);
 
     background:url(../assets/Ellipse1.png);
 }
@@ -126,8 +128,8 @@
     position: absolute;
     width: 13px;
     height: 13px;
-    left: 638px;
-    top: 495px;
+    left: calc(50% - 360px/2 - 280px + 403px);
+    top: calc(50% - 334px/2 - 00px + 9px + 68px + 68px);
 
     background:url(../assets/Ellipse1.png);
 }
@@ -135,8 +137,8 @@
     position: absolute;
     width: 13px;
     height: 13px;
-    left: 638px;
-    top: 570px;
+    left: calc(50% - 360px/2 - 280px + 403px);
+    top: calc(50% - 334px/2 - 00px + 9px + 68px + 68px + 68px);
 
     background:url(../assets/Ellipse1.png);
 }
@@ -152,8 +154,8 @@
     position: absolute;
     width: 209px;
     height: 210px;
-    left: 235px;
-    top: 387px;
+    left: calc(50% - 360px/2 - 280px);
+    top: calc(50% - 334px/2 - 00px);
 
     /* Neutral/6 */
 
@@ -165,8 +167,9 @@
     position: absolute;
     width: 125px;
     height: 22px;
-    left: 662px;
-    top: 355px;
+    left: calc(50% - 360px/2 - 280px + 403px + 24px);
+    top: calc(50% - 334px/2 - 00px + 9px - 4px);
+
 
     font-family: Poppins;
     font-style: normal;
@@ -184,8 +187,8 @@
     position: absolute;
     width: 154px;
     height: 22px;
-    left: 665px;
-    top: 423px;
+    left: calc(50% - 360px/2 - 280px + 403px + 24px);
+    top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px);
 
     font-family: Poppins;
     font-style: normal;
@@ -202,8 +205,8 @@
     position: absolute;
     width: 125px;
     height: 22px;
-    left: 665px;
-    top: 491px;
+    left: calc(50% - 360px/2 - 280px + 403px + 24px);
+    top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px + 68px);
 
     font-family: Poppins;
     font-style: normal;
@@ -220,8 +223,8 @@
     position: absolute;
     width: 193px;
     height: 22px;
-    left: 665px;
-    top: 566px;
+    left: calc(50% - 360px/2 - 280px + 403px + 24px);
+    top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px + 68px + 68px);
 
     font-family: Poppins;
     font-style: normal;
@@ -238,8 +241,8 @@
     position: absolute;
     width: 125px;
     height: 22px;
-    left: 795px;
-    top: 355px;
+    left: calc(50% - 360px/2 - 280px + 403px + 24px + 100px);
+    top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px + 68px);
 
     font-family: Poppins;
     font-style: normal;
