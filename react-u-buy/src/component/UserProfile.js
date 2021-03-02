@@ -63,7 +63,7 @@ class UserProfile extends Component {
                     <div className={"user_profile_ellipse6"}></div>
                     <div className={"user_profile_ellipse7"}></div>
 
-                    <Avatar src={"https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860-dragon-header-iStock-494839519.gif"} className={"user_profile_avatar"}/>
+                    <Avatar src={this.state.User.photoUrl} className={"user_profile_avatar"}/>
 
                     <div className={"user_profile_ellipse1"}></div>
                     <div className={"user_profile_ellipse2"}></div>
