@@ -17,7 +17,6 @@
     font-size: 36px;
     line-height: 20px;
     /* or 56% */
-
     display: flex;
     align-items: center;
     color:#7B64D8;
@@ -37,7 +36,6 @@
 .Tag {
 
         height: 40px;
-        width: wrap-content;
         padding-top: 8px;
         font-size: x-large;
         padding-left: 10px;
@@ -55,6 +53,7 @@
     background-color: #1890FF;
     border-radius: 4px;
     font-size: x-large;
+    color: white;
     
 }
 
@@ -76,4 +75,23 @@
 
 .TagsHeader {
     display: flex;
+}
+
+.Edit {
+    font-size: larger;
+}
+
+.SelectedTag {
+    height: 40px;
+    padding-top: 8px;
+    font-size: x-large;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 2px;    
+    border-color: #7B64D8;
+    border-width: medium;
 }
