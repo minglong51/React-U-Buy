@@ -7,6 +7,7 @@ import axios from 'axios';
 import { FrownOutlined, HeartTwoTone, CheckCircleTwoTone } from '@ant-design/icons';
 import controller3  from '../assets/controller3.svg';
 import controller4  from '../assets/controller4.svg';
+import { Link } from 'react-router-dom';
 
 const { Meta } = Card;
 
@@ -79,6 +80,10 @@ class Recommendation extends Component {
                     <Tag color="magenta" className="RecommendationTag">First Person Shooter</Tag>
                     <Tag color="blue" className="RecommendationTag">Party</Tag>
                     <Tag color="yellow" className="RecommendationTag">Collaborate</Tag>
+
+                    <span className="Edit">
+                        <Link to="/tags" className="Edit">Edit</Link>
+                    </span>
                 </div>
                 <div className="GameRecommendation">
                 <img src={controller4} alt="icon"/> Game Recommendation

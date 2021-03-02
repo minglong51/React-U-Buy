@@ -2,22 +2,26 @@ import React, { Component } from 'react';
 import { Tag, Divider } from 'antd';
 import controller1  from '../assets/controller1.svg';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class TagsSelection extends Component {
-    state = {
-        tags: [],
-        colors: ["blue", "yellow", "orange", "magenta","green"],
-    }
+    
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            tags: [],
+            colors: ["blue", "yellow", "orange", "magenta","green", "purple"],
+            selectedTags: [],
+        }
+      }
 
     getTags = () => {
         const url = '/genres';
         axios.get(url)
            .then(response => {
-               const data = response.data.genres.map((genres) => {
-                 return {
-                          "genreName" : genres.genreName, 
-                          "genreId" : genres.genreId,             
-                        }           
+               const data = response.data.tag_types.map((tags) => {
+                    return tags;                  
                })
                this.setState({
                  ...this.state, 
@@ -27,21 +31,45 @@ class TagsSelection extends Component {
            })
            .catch(error => {
                console.log('err in fetch products -> ', error);
-           })
-    
+           })   
       }
     
       componentDidMount = () => {
         this.getTags();
       }
-      renderTags = (item) => { 
-        const {colors} = this.state;
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        console.log(color);
-        return (  
-        <Tag key={item.genreName} color={color} className="Tag">{item.genreName}</Tag>
 
-        )}
+      selectTag = (e) => {
+        let tag = e.target.dataset.tag;
+        let idx = this.state.selectedTags.indexOf(tag);
+        if (idx === -1) {
+            this.setState(prevState => ({
+                selectedTags: [...prevState.selectedTags, tag]
+              }));
+            console.log(this.state);
+        } else {
+            let tmpArray = [...this.state.selectedTags];
+            tmpArray.splice(idx, 1);
+            this.setState(prevState => ({
+                selectedTags: tmpArray
+            }));
+            console.log(this.state);
+        }
+      }
+
+      renderTags = (item, idx) => { 
+        const {colors} = this.state;
+        const color = colors[ idx % colors.length];
+        const selected = this.state.selectedTags.indexOf(item);
+        if (item !== "EMPTY") {
+            return (  
+                <Tag key={item} color={color} 
+                    data-tag={item} 
+                    className={selected !== -1 ? "SelectedTag" :"Tag"}
+                    onClick={this.selectTag}
+                >
+                        {item}
+                </Tag>    
+        )}}
 
     render() {
         const {tags} = this.state;
@@ -57,10 +85,12 @@ class TagsSelection extends Component {
 
                 <div>
                     {   
-                        tags.map(tag => this.renderTags(tag))
+                        tags.map((tag, idx) => this.renderTags(tag, idx))
                     }
                 <div className="recommendBtnContainer">
-                        <button className="recommendBtn">Recommend!</button>
+                <Link className="recommendBtn" to="/recommendation">
+                    <button className="recommendBtn">Recommend!</button>
+                </Link>
                     </div> 
                 </div>
                             
