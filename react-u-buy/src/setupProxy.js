@@ -21,7 +21,7 @@ module.exports = function(app) {
        })
    );
     app.use(
-        "/users",
+        "/user",
         createProxyMiddleware({
             target: "http://optubuy.us-east-2.elasticbeanstalk.com",
             changeOrigin: true,

@@ -15,18 +15,20 @@ class UserProfile extends Component {
     }
 
     getUser= () => {
-        const url = '/users';
+        const url = '/user/433';
         axios.get(url)
             .then(response => {
-                const data = response.data.users.map((user) => {
+                let getUser = (user) => {
                     return {
                         "userId" : user.userId,
-                        "username"  :user.username,
+                        "username":user.username,
+                        "email": user.email,
                         "password" :user.password,
                         "photoUrl" : user.photoUrl,
                         "tags":user.tags
                     }
-                })
+                };
+                const data = getUser(response.data.user);
                 console.log(data);
                 this.setState({
                     ...this.state,
@@ -49,7 +51,7 @@ class UserProfile extends Component {
 
     render() {
         const data = this.state.User;
-        console.log(this.state);
+        console.log(this.state.User.username);
         return (
             <div className='User_Profile'>
                 <ArrowLeftOutlined className={"user_arrow"}></ArrowLeftOutlined>
@@ -75,9 +77,9 @@ class UserProfile extends Component {
                     <p className={"user_profile_text_password"}>Password:</p>
                     <p className={"user_profile_text_game"}>Game Preference:</p>
 
-                    <p className={"user_profile_name"}>{this.state.username}</p>
-                    <p className={"user_profile_email"}>{this.state.username}</p>
-                    <p className={"user_profile_password"}>{this.state.username}</p>
+                    <p className={"user_profile_name"}>{this.state.User.username}</p>
+                    <p className={"user_profile_email"}>{this.state.User.email}</p>
+                    <p className={"user_profile_password"}>{this.state.User.password}</p>
                     <div className={"user_profile_game"} onClick={this.handleClick}>Edit</div>
                 </div>
             </div>
