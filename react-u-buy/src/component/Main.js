@@ -45,7 +45,7 @@ class Main extends Component {
     }
 
     getUserProfile=()=>{
-        return <UserProfile/>;
+        return <UserProfile />;
     }
 
     getLandingPage = () => {

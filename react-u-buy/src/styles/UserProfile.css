@@ -319,3 +319,44 @@
     color: #1890FF;
 }
 
+.user_profile_tag1{
+
+    position: absolute;
+    width: 143px;
+    height: 41px;
+    left: calc(50% - 360px/2 - 280px + 403px + 24px );
+    top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px + 68px + 68px + 68px);
+
+    background: #F6FFED;
+    border: 1px solid #B7EB8F;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.user_profile_tag2{
+    position: absolute;
+    width: 143px;
+    height: 41px;
+    left: calc(50% - 360px/2 - 280px + 403px + 24px + 180px );
+    top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px + 68px + 68px + 68px);
+
+    background: #F0F5FF;
+    border: 1px solid #ADC6FF;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+}
+
+.user_profile_tag3{
+
+    position: absolute;
+    width: 143px;
+    height: 41px;
+    left: calc(50% - 360px/2 - 280px + 403px + 24px + 180px + 180px );
+    top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px + 68px + 68px + 68px);
+
+    background: #FFF7E6;
+    border: 1px solid #FFD591;
+    box-sizing: border-box;
+    border-radius: 2px;
+}

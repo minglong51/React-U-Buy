@@ -1,9 +1,9 @@
 import React, {useState, Component} from 'react';
 import 'antd/dist/antd.css';
-import {List, Avatar } from 'antd';
+import {List, Avatar, Icon} from 'antd';
 import {ArrowLeftOutlined, UserOutlined} from '@ant-design/icons';
 import axios from 'axios';
-import {Redirect} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 
 
 
@@ -42,9 +42,7 @@ class UserProfile extends Component {
 
     }
 
-    handleClick = (e)=>{
-        return <Redirect to="/tags"/>;
-    }
+
     componentDidMount = () => {
         this.getUser();
     }
@@ -80,7 +78,12 @@ class UserProfile extends Component {
                     <p className={"user_profile_name"}>{this.state.User.username}</p>
                     <p className={"user_profile_email"}>{this.state.User.email}</p>
                     <p className={"user_profile_password"}>{this.state.User.password}</p>
-                    <div className={"user_profile_game"} onClick={this.handleClick}>Edit</div>
+                    <Link className={"user_profile_game"} to="/tags">Edit</Link>
+
+                    <div className={"user_profile_tag1"}>tag1</div>
+                    <div className={"user_profile_tag2"}>tag2</div>
+                    <div className={"user_profile_tag3"}>tag3</div>
+
                 </div>
             </div>
 
