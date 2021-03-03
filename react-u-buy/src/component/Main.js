@@ -45,7 +45,8 @@ class Main extends Component {
     }
 
     getUserProfile=()=>{
-        return <UserProfile />;
+        console.log(this.props.userId);
+        return <UserProfile userId={this.props.userId}/>;
     }
 
     getLandingPage = () => {
@@ -57,7 +58,7 @@ class Main extends Component {
             <div className="main">
                 <div className="Component">
                 <Switch>
-                    <Route path="/login" render={this.getLogin}/>
+                    <Route path="/login&register" render={this.getLogin}/>
                     {/*<Route path="/home" render={this.getMachine}/>*/}
                     <Route path="/likedgames" render={this.getLikedGame}/>
                     {/*<Route path="/register" render={this.getRegister}/>*/}

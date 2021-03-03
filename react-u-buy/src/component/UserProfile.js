@@ -15,7 +15,9 @@ class UserProfile extends Component {
     }
 
     getUser= () => {
-        const url = '/user/433';
+        let id = this.props.userId;
+        console.log(id);
+        const url = `/user/${id}`;
         axios.get(url)
             .then(response => {
                 let getUser = (user) => {
@@ -48,8 +50,11 @@ class UserProfile extends Component {
     }
 
     render() {
+
         const data = this.state.User;
         console.log(this.state.User.username);
+        let tags = this.state.User.tags + "";
+        let str = tags.split(",");
         return (
             <div className='User_Profile'>
                 <ArrowLeftOutlined className={"user_arrow"}></ArrowLeftOutlined>
@@ -80,9 +85,9 @@ class UserProfile extends Component {
                     <p className={"user_profile_password"}>{this.state.User.password}</p>
                     <Link className={"user_profile_game"} to="/tags">Edit</Link>
 
-                    <div className={"user_profile_tag1"}>tag1</div>
-                    <div className={"user_profile_tag2"}>tag2</div>
-                    <div className={"user_profile_tag3"}>tag3</div>
+                    <div className={"user_profile_tag1"}>{str[0]}</div>
+                    <div className={"user_profile_tag2"}>{str[1]}</div>
+                    <div className={"user_profile_tag3"}>{str[2]}</div>
 
                 </div>
             </div>

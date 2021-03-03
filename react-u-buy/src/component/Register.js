@@ -11,17 +11,18 @@ class NormalRegisterForm extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                fetch(`${API_ROOT}/admin/register`, {
+                fetch(`/register`, {
                     headers:{
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     },
                     method: 'POST',
                     body: JSON.stringify({
+                        userId:null,
                         username: values.username,
                         password: values.password,
                         email:values.email,
-                        photoUrl:values.photoUrl
+                        photoUrl:"https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860-dragon-header-iStock-494839519.gif"
                     }),
                 })
                     .then((response) =>{

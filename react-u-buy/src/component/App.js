@@ -8,20 +8,25 @@ class App extends Component {
     state = {
         data: [],
         //current: 'Machine',
-        user: [],
+        userId: [],
         location: [],
-        isLoggedIn : true,
+        isLoggedIn : false,
         //isLoggedIn:Boolean(localStorage.getItem(TOKEN_KEY)),
     };
 
-    handleLoginSucceed = (token) => {
-        console.log('token --- ', token)
-        localStorage.setItem(TOKEN_KEY, token)
-        this.setState({ isLoggedIn: true});
+    handleLoginSucceed = (user) => {
+
+
+        this.setState(
+            { isLoggedIn: true,
+                    userId: user.userId,
+            }
+        );
+        console.log(this.state.userId);
     }
 
     handleLogout = () => {
-        localStorage.removeItem(TOKEN_KEY);
+
         this.setState({ isLoggedIn: false });
     }
 
@@ -70,7 +75,7 @@ class App extends Component {
                 <Main  handleLoginSucceed={this.handleLoginSucceed}
                        isLoggedIn={this.state.isLoggedIn}
                        data={this.state.data}
-                       user={this.state.user}
+                       userId={this.state.userId}
                        location={this.state.location}
                 />
             </div>

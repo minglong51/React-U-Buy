@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Form, Icon, Input, Button, message, Tabs,Upload} from 'antd';
+import {Form, Icon, Input, Button, message, Tabs, Upload} from 'antd';
 import {Link} from 'react-router-dom';
 import {API_ROOT} from '../constants';
 import {AlipayCircleOutlined, TaobaoCircleOutlined, WeiboCircleOutlined} from '@ant-design/icons';
@@ -11,10 +11,10 @@ class NormalLoginForm extends Component {
     state = {
         hasSignUp: true
     };
-    handleLogin=e=>{
+    handleLogin = e => {
         // e.preventDefault();
-        this.setState(pre=>({
-            hasSignUp:!pre.hasSignUp
+        this.setState(pre => ({
+            hasSignUp: !pre.hasSignUp
         }))
 
     }
@@ -29,16 +29,12 @@ class NormalLoginForm extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                fetch(`${API_ROOT}/admin/login`, {
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
+                let formData = new FormData()
+                formData.append("username", values.username);
+                formData.append( "password", values.password);
+                fetch(`/login`, {
                     method: 'POST',
-                    body: JSON.stringify({
-                        username: values.username,
-                        password: values.password,
-                    }),
+                    body: formData
                 })
                     .then((response) => {
                         //console.log(response)
@@ -49,8 +45,8 @@ class NormalLoginForm extends Component {
                         }
                     })
                     .then((data) => {
-                        //console.log(data.token);
-                        this.props.handleLoginSucceed(data.token);   // data is token
+                        console.log(data.user);
+                        this.props.handleLoginSucceed(data.user);
                         message.success('Login succeed!');
 
                         //step4: 登录成功，保存token -> 用于实现持久登录
@@ -77,58 +73,58 @@ class NormalLoginForm extends Component {
 
                 <div className={"login-register-box"}>
 
-                <Tabs className={"tabs-top"} defaultActiveKey="1" onChange={this.handleLogin}>
-                    <TabPane tab="login" className={"login_tab"} key={"1"}></TabPane>
-                    <TabPane tab="signup" className={"register_tab"} key ={"2"}></TabPane>
-                </Tabs>
+                    <Tabs className={"tabs-top"} defaultActiveKey="1" onChange={this.handleLogin}>
+                        <TabPane tab="login" className={"login_tab"} key={"1"}></TabPane>
+                        <TabPane tab="signup" className={"register_tab"} key={"2"}></TabPane>
+                    </Tabs>
 
-                {this.state.hasSignUp ?
-                    <div className="login_box">
-                        <Form onSubmit={this.handleSubmit} className="login-form">
-                            <Form.Item className={""}>
-                                {getFieldDecorator('username', {
-                                    rules: [{required: true, message: 'Please input your username!'}],
-                                })(
-                                    <Input
-                                        prefix={<Icon type="user" style={{color: 'rgba(0,0,0,.25)'}}/>}
-                                        placeholder="Username"
-                                    />,
-                                )}
-                            </Form.Item>
-                            <Form.Item className={""}>
-                                {getFieldDecorator('password', {
-                                    rules: [{required: true, message: 'Please input your Password!'}],
-                                })(
-                                    <Input
-                                        prefix={<Icon type="lock" style={{color: 'rgba(0,0,0,.25)'}}/>}
-                                        type="password"
-                                        placeholder="Password"
-                                    />,
-                                )}
-                            </Form.Item>
-                            <Form.Item>
-                                <Button type="primary" htmlType="submit" className="login-form-button">
-                                    Log in
-                                </Button>
-                            </Form.Item>
-                        </Form>
+                    {this.state.hasSignUp ?
+                        <div className="login_box">
+                            <Form onSubmit={this.handleSubmit} className="login-form">
+                                <Form.Item className={""}>
+                                    {getFieldDecorator('username', {
+                                        rules: [{required: true, message: 'Please input your username!'}],
+                                    })(
+                                        <Input
+                                            prefix={<Icon type="user" style={{color: 'rgba(0,0,0,.25)'}}/>}
+                                            placeholder="Username"
+                                        />,
+                                    )}
+                                </Form.Item>
+                                <Form.Item className={""}>
+                                    {getFieldDecorator('password', {
+                                        rules: [{required: true, message: 'Please input your Password!'}],
+                                    })(
+                                        <Input
+                                            prefix={<Icon type="lock" style={{color: 'rgba(0,0,0,.25)'}}/>}
+                                            type="password"
+                                            placeholder="Password"
+                                        />,
+                                    )}
+                                </Form.Item>
+                                <Form.Item>
+                                    <Button type="primary" htmlType="submit" className="login-form-button">
+                                        Log in
+                                    </Button>
+                                </Form.Item>
+                            </Form>
 
-                    </div> :
-                    <div className="login_box">
-                    <Register/>
-                    </div>}
+                        </div> :
+                        <div className="login_box">
+                            <Register/>
+                        </div>}
 
-            <div className={"quick-sign-in-box"}>
-                <div className={"quick-sign-in"}>Quick Sign-in</div>
-                <div className={"quick-sign-in-icon"}>
+                    <div className={"quick-sign-in-box"}>
+                        <div className={"quick-sign-in"}>Quick Sign-in</div>
+                        <div className={"quick-sign-in-icon"}>
 
-                <AlipayCircleOutlined />
-                <TaobaoCircleOutlined />
-                <WeiboCircleOutlined />
+                            <AlipayCircleOutlined/>
+                            <TaobaoCircleOutlined/>
+                            <WeiboCircleOutlined/>
+                        </div>
+                        <button className={"sign-up-button"}>Sign Up</button>
+                    </div>
                 </div>
-                <button className={"sign-up-button"}>Sign Up</button>
-            </div>
-            </div>
             </div>
         );
     }

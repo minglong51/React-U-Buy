@@ -13,6 +13,14 @@
     color:white;
 }
 
+.user{
+    float: right;
+    padding-top: 13px;
+    padding-right: 13px;
+    font-weight: bold;
+    color:white;
+}
+
 .logout {
     float: right;
     padding-top: 13px;
@@ -28,5 +36,9 @@
 }
 
 .TopBarLikeGame {
+    color: white;
+}
+
+.TopBarUserProfile {
     color: white;
 }
