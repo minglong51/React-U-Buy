@@ -55,6 +55,9 @@ class Main extends Component {
                     setFavorite={this.props.setFavorite}
                     unsetFavorite={this.props.unsetFavorite}
                     likedGames={this.props.likedGames}
+                    addBlackList={this.props.addBlackList}
+                    removeBlackList={this.props.removeBlackList}
+                    blackListGames={this.props.blackListGames}
                 />;
     }
 
@@ -73,20 +76,23 @@ class Main extends Component {
     }
 
     render() {
+        let isLoggedIn = this.props.isLoggedIn;
         return (
             <div className="main">
                 <div className="Component">
-                <Switch>
-                    <Route path="/login&register" render={this.getLogin}/>
-                    {/*<Route path="/home" render={this.getMachine}/>*/}
-                    <Route path="/likedgames" render={this.getLikedGame}/>
-                    {/*<Route path="/register" render={this.getRegister}/>*/}
-                    <Route path="/tags" render={this.getTagsSelection}/>
-                    <Route path="/recommendation" render={this.getRecommendation}/>
-                    <Route path="/profile" render={this.getUserProfile}/>
-                    <Route path="/landing" render={this.getLandingPage}/>
-                    <Route path="/" render={this.getLogin}/>
-                </Switch>
+                    {!isLoggedIn && 
+                        <Route path="/" render={this.getLogin}/>}
+                    { isLoggedIn &&
+                        <Switch>
+                            <Route path="/login&register" render={this.getLogin}/>
+                            <Route path="/likedgames" render={this.getLikedGame}/>
+                            <Route path="/tags" render={this.getTagsSelection}/>
+                            <Route path="/recommendation" render={this.getRecommendation}/>
+                            <Route path="/profile" render={this.getUserProfile}/>
+                            <Route path="/landing" render={this.getLandingPage}/>
+                            <Route path="/" render={this.getLogin}/>
+                        </Switch>
+                    }
                 </div>
                
                 {this.props.isLoggedIn ? <div className="footnote">Opt-U-Buy Application, Mailing Address: dddmb@foxmail.com, Opt-U-Buy 2021 Project</div>:
