@@ -25,9 +25,12 @@ class Main extends Component {
     getLikedGame = () => {
         // console.log(this.props.data)
         return this.props.isLoggedIn ?
-            <LikedGames data={this.props.data}
-            user={this.props.user}
-            location={this.props.location}/> : <Redirect to = "/login"/>;
+            <LikedGames 
+                data={this.props.data}
+                user={this.props.user}
+                location={this.props.location}
+                likedGames={this.props.likedGames}
+            /> : <Redirect to = "/login"/>;
     }
     // getRegister = () => {
     //     console.log(this.props.data)
@@ -37,11 +40,26 @@ class Main extends Component {
     // }
 
     getTagsSelection = () => {
-        return  <TagsSelection />;
+        return  <TagsSelection
+                    selectTag={this.props.selectTag}
+                    tags={this.props.tags}
+                    user={this.props.user}
+                    setTagsAtServer={this.props.setTagsAtServer}
+                    selectedTags={this.props.selectedTags}
+                    colors={this.props.colors}
+                 />;
     }
 
     getRecommendation = () => {
-        return  <Recommendation />;
+        return  <Recommendation 
+                    selectedTags={this.props.selectedTags}
+                    colors={this.props.colors}
+                    user={this.props.user}
+                    recommendedGames={this.props.recommendedGames}
+                    tags={this.props.tags}
+                    getRecommendation={this.props.getRecommendation}
+                    setFavorite={this.props.setFavorite}
+                />;
     }
 
     getUserProfile=()=>{
