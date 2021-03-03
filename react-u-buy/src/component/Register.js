@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { Form, Icon, Input, Button, message, Upload} from 'antd';
-import { Link } from 'react-router-dom';
-import { API_ROOT } from '../constants'
+import axios from 'axios';
 import {UploadOutlined} from '@ant-design/icons';
 
 
@@ -26,7 +25,8 @@ class NormalRegisterForm extends Component {
                     }),
                 })
                     .then((response) =>{
-                        //console.log(response)
+                        console.log("register");
+                        console.log(response);
                         if (response.ok) {
                             return response.json();
                         } else {
@@ -57,8 +57,25 @@ class NormalRegisterForm extends Component {
         return e && e.fileList;
     };
 
+    dummyRequest = ({file, onSuccess}) => {
+        let res = {
+            "name": "xxx.png",
+            "status": "done",
+            "url": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+            "thumbUrl": 
+            "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+        }
+        setTimeout(
+            () => {
+                onSuccess(res);
+            }
+            , 1);
+    }
+
+
     handleUpload=(file, fileList, event)=>{
-        console.log(fileList);
+        console.log("file");
+        console.log(file);
 
     }
     render() {
@@ -115,7 +132,12 @@ class NormalRegisterForm extends Component {
                     label="Upload"
                     extra=""
                 >
-                    <Upload name="logo" onchange={this.handleUpload} listType="picture">
+                    <Upload 
+                        name="logo" 
+                        customRequest={this.dummyRequest}
+                        onChange={this.handleUpload} 
+                        listType="picture"
+                    >
                         <Button icon={<UploadOutlined />}>Click to upload</Button>
                     </Upload>
                 </Form.Item>

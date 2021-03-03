@@ -83,4 +83,31 @@ module.exports = function (app) {
         })
     );
 
+    app.use(
+        "/register",
+        createProxyMiddleware({
+            target: "http://optubuy.us-east-2.elasticbeanstalk.com",
+            changeOrigin: true,
+            logLevel: "debug",
+        })
+    );
+
+    app.use(
+        "/login",
+        createProxyMiddleware({
+            target: "http://optubuy.us-east-2.elasticbeanstalk.com",
+            changeOrigin: true,
+            logLevel: "debug",
+        })
+    );
+
+    app.use(
+        "/upload_photo",
+        createProxyMiddleware({
+            target: "http://localhost:9999",
+            changeOrigin: true,
+            logLevel: "debug",
+        })
+    );
+
 }

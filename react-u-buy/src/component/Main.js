@@ -13,7 +13,11 @@ class Main extends Component {
 
     getLogin = () => {
         return this.props.isLoggedIn ?
-            <Redirect to="/tags"/> : <Login handleLoginSucceed={this.props.handleLoginSucceed}/>;
+            <Redirect to="/tags"/> : 
+            <Login 
+                handleLoginSucceed={this.props.handleLoginSucceed}
+                isLoggedIn={this.props.isLoggedIn}
+            />;
     }
     // getMachine = () => {
     //     console.log(this.props.data)
@@ -90,7 +94,7 @@ class Main extends Component {
                             <Route path="/recommendation" render={this.getRecommendation}/>
                             <Route path="/profile" render={this.getUserProfile}/>
                             <Route path="/landing" render={this.getLandingPage}/>
-                            <Route path="/" render={this.getLogin}/>
+                            <Route path="/" render={this.getTagsSelection}/>
                         </Switch>
                     }
                 </div>

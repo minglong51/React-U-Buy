@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { TOKEN_KEY } from "../constants";
 import TopBar from "./TopBar";
 import Main from "./Main";
 import axios from 'axios';
@@ -12,7 +11,7 @@ class App extends Component {
         location: [],
         isLoggedIn: false,
         //isLoggedIn:Boolean(localStorage.getItem(TOKEN_KEY)),
-        colors: ["blue", "yellow", "orange", "magenta", "green", "purple"],
+        colors: ["blue", "orange", "magenta", "green", "purple"],
         selectedTags: [],
         recommendedGames: [],
         tags: [],
@@ -23,10 +22,8 @@ class App extends Component {
 
     handleLoginSucceed = (user) => {
 
-        this.getRecommendation();
-        this.getLikedGames();
-        this.getBlackListGames();
-        let selectedTags = user.tags.split(",");
+        let selectedTags = user.tags === null ? [] :  user.tags.split(",");
+       
         this.setState(
             {
                 isLoggedIn: true,
@@ -35,6 +32,10 @@ class App extends Component {
                 selectedTags: selectedTags,
             }
         );
+        this.getRecommendation();
+        this.getLikedGames();
+        this.getBlackListGames();
+        
     }
 
     handleLogout = () => {

@@ -80,7 +80,7 @@ class Recommendation extends Component {
     renderTags = (item, idx) => {
         const { colors } = this.props;
         const color = colors[idx % colors.length];
-        if (item !== "EMPTY") {
+        if (item !== "EMPTY" && item != "") {
             return (
                 <Tag key={item} color={color}
                     data-tag={item}
