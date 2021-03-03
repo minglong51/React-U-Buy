@@ -13,59 +13,6 @@ const { Meta } = Card;
 
 class Recommendation extends Component {
 
-    // state = {
-    //     recommendedGame : [],
-    //     user: {},
-    //     tags:[],
-    //     colors: ["blue", "yellow", "orange", "magenta","green", "purple"],
-    // }
-
-    // getRecommendation = () => {
-    //     const url = '/products?page=4&page_size=3';
-    //     axios.get(url)
-    //        .then(response => {
-    //            const data = response.data.products.map((product) => {
-    //              return {
-    //                       "productName" : product.productName,
-    //                       "purchaseURL"  :product.purchaseUrl,
-    //                       "productDescription" :product.productDescription,
-    //                       "imageUrls" : product.imageUrls.split(","),
-    //                     }           
-    //            })
-    //            this.setState({
-    //              ...this.state, 
-    //              recommendedGame:data}
-    //            );
-    //        })
-    //        .catch(error => {
-    //            console.log('err in fetch products -> ', error);
-    //        })
-    //   }
-
-    //   getUser = () => {
-    //     const url = '/user/433';
-    //     axios.get(url)
-    //        .then(response => {
-    //            const user = response.data.user;
-
-    //            const splitTags = user.tags.split(",");
-           
-    //            this.setState({
-    //              ...this.state, 
-    //              user:user,
-    //              tags: splitTags}
-    //            );
-    //        })
-    //        .catch(error => {
-    //            console.log('err in fetch products -> ', error);
-    //        })
-    //   }
-    
-    //   componentDidMount = () => {
-    //     this.getRecommendation();
-    //     this.getUser();
-    //   }
-
       componentDidUpdate = () => {   
         //this.getUser();
       }

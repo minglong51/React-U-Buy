@@ -22,7 +22,7 @@
     font-size: 20px;
     line-height: 28px;
 
-    color: #7B64D8;
+    color: white;
 }
 
 .user_profile_icon{
@@ -318,7 +318,7 @@
 
     color: #1890FF;
 }
-
+/* 
 .user_profile_tag1{
 
     position: absolute;
@@ -345,9 +345,17 @@
     box-sizing: border-box;
     border-radius: 2px;
 
+} */
+
+.ProfileTags {
+    display: block;
+    position: absolute;
+    bottom: 20%;
+    left: 45%
+
 }
 
-.user_profile_tag3{
+/* .user_profile_tag3{
 
     position: absolute;
     width: 143px;
@@ -359,4 +367,4 @@
     border: 1px solid #FFD591;
     box-sizing: border-box;
     border-radius: 2px;
-}
+} */

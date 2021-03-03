@@ -45,28 +45,6 @@ class App extends Component {
     componentWillUnmount() {
     }
 
-
-    // 我们的第一个使用后端api的get方法
-    // 从我们的数据库中获取数据
-    getGameFromDb = () => {
-        // fetch('')
-        //     .then((data) => data.json())
-        //     .then((res) => this.setState({ data: ""}));
-    };
-
-
-    putDataToDB = (message) => {
-        //todo
-    };
-
-    deleteFromDB = (idTodelete) => {
-        //todo
-    };
-
-    updateDB = (idToUpdate, updateToApply) => {
-        //todo
-    };
-
     selectTag = (e) => {
         let tag = e.target.dataset.tag;
         let idx = this.state.selectedTags.indexOf(tag);
@@ -188,11 +166,6 @@ class App extends Component {
                console.log('err in fetch favorites -> ', error);
            })
       }
-
-    // handleClick = e => {
-    //   console.log('click ', e);
-    //   this.setState({ current: e.key });
-    // };
 
     render() {
         return (

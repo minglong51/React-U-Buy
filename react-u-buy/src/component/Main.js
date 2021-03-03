@@ -64,7 +64,12 @@ class Main extends Component {
 
     getUserProfile=()=>{
         console.log(this.props.userId);
-        return <UserProfile userId={this.props.userId}/>;
+        return <UserProfile 
+                    userId={this.props.userId}
+                    user={this.props.user}
+                    selectedTags={this.props.selectedTags}
+                    colors={this.props.colors}
+                />;
     }
 
     getLandingPage = () => {
