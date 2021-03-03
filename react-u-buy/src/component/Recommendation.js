@@ -13,38 +13,72 @@ const { Meta } = Card;
 
 class Recommendation extends Component {
 
-    state = {
-        recommendedGame : [],
-    }
-    getRecommendation = () => {
-        const url = '/products?page=4&page_size=3';
-        axios.get(url)
-           .then(response => {
-               const data = response.data.products.map((product) => {
-                 return {
-                          "productName" : product.productName,
-                          "purchaseURL"  :product.purchaseUrl,
-                          "productDescription" :product.productDescription,
-                          "imageUrls" : product.imageUrls.split(","),
-                        }           
-               })
-               this.setState({
-                 ...this.state, 
-                 recommendedGame:data}
-               );
-           })
-           .catch(error => {
-               console.log('err in fetch products -> ', error);
-           })
-      }
+    // state = {
+    //     recommendedGame : [],
+    //     user: {},
+    //     tags:[],
+    //     colors: ["blue", "yellow", "orange", "magenta","green", "purple"],
+    // }
+
+    // getRecommendation = () => {
+    //     const url = '/products?page=4&page_size=3';
+    //     axios.get(url)
+    //        .then(response => {
+    //            const data = response.data.products.map((product) => {
+    //              return {
+    //                       "productName" : product.productName,
+    //                       "purchaseURL"  :product.purchaseUrl,
+    //                       "productDescription" :product.productDescription,
+    //                       "imageUrls" : product.imageUrls.split(","),
+    //                     }           
+    //            })
+    //            this.setState({
+    //              ...this.state, 
+    //              recommendedGame:data}
+    //            );
+    //        })
+    //        .catch(error => {
+    //            console.log('err in fetch products -> ', error);
+    //        })
+    //   }
+
+    //   getUser = () => {
+    //     const url = '/user/433';
+    //     axios.get(url)
+    //        .then(response => {
+    //            const user = response.data.user;
+
+    //            const splitTags = user.tags.split(",");
+           
+    //            this.setState({
+    //              ...this.state, 
+    //              user:user,
+    //              tags: splitTags}
+    //            );
+    //        })
+    //        .catch(error => {
+    //            console.log('err in fetch products -> ', error);
+    //        })
+    //   }
     
-      componentDidMount = () => {
-        this.getRecommendation();
+    //   componentDidMount = () => {
+    //     this.getRecommendation();
+    //     this.getUser();
+    //   }
+
+      componentDidUpdate = () => {   
+        //this.getUser();
       }
 
-    renderCards = (item) => { return (  
+      onClick = (e) => {
+        console.log(e);
+      }
+
+    renderCards = (item) => { 
+        console.log(item.rawProduct);
+        return (
         <Card className="Card"
-        style={{ width: 300 }}
+        style={{ width: 300,  }}
         cover={
         <img
             alt="example"
@@ -52,7 +86,12 @@ class Recommendation extends Component {
         />}
             actions={[
             <FrownOutlined color="#1890FF" key="setting" />,
-            <HeartTwoTone twoToneColor="red" key="edit" />,
+            <HeartTwoTone 
+                data-product={item.rawProduct} 
+                twoToneColor="red" 
+                onClick={
+                  () => {this.props.setFavorite(item.rawProduct)}  
+                } />,
             <EllipsisOutlined key="ellipsis" />,
             ]}
             title={item.productName}
@@ -65,35 +104,47 @@ class Recommendation extends Component {
 
     )}
 
+    renderTags = (item, idx) => { 
+        const {colors} = this.props;
+        const color = colors[ idx % colors.length];
+        if (item !== "EMPTY") {
+            return (  
+                <Tag key={item} color={color} 
+                    data-tag={item} 
+                    className="RecommendationTag"
+                >
+                        {item}
+                </Tag>    
+     )}}
+
     render() {
-        // console.log(this.state.recommendedGame);
-        const items = this.state.recommendedGame;
-        
+        const items = this.props.recommendedGames;
+        const tags = this.props.selectedTags;
         return (
             
             <div className="Recommendation">
                 <div className="RecommendationHeaderText">
-                    <img src={controller3} alt="icon"/> Game Preference
+                    <div className="Controllers"><img src={controller3} alt="icon" /></div> Game Preference
                 </div>
                 <div className="RecommendationHeaderTags">
-                    
-                    <Tag color="magenta" className="RecommendationTag">First Person Shooter</Tag>
-                    <Tag color="blue" className="RecommendationTag">Party</Tag>
-                    <Tag color="yellow" className="RecommendationTag">Collaborate</Tag>
+
+                    {
+                        tags.map((tag, idx) => this.renderTags(tag, idx))
+                    }
 
                     <span className="Edit">
                         <Link to="/tags" className="Edit">Edit</Link>
                     </span>
                 </div>
                 <div className="GameRecommendation">
-                <img src={controller4} alt="icon"/> Game Recommendation
+                <img src={controller4} alt="icon" className="Controllers"/> Game Recommendation
                 </div>
                 <div className="RecommendationCards">
                
                 {items.map(item => this.renderCards(item))}
                 </div>
       
-                <Button type="primary" size = "large" className="MoreGameButton" onClick={this.getRecommendation}>Another Round</Button>
+                <Button type="primary" size = "large" className="MoreGameButton" onClick={this.props.getRecommendation}>Another Round</Button>
           
                 </div>
         );
