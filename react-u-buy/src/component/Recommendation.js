@@ -1,10 +1,9 @@
 import {Component} from 'react';
 import {Tag} from 'antd'
 import { Card, Avatar } from 'antd';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import {EllipsisOutlined } from '@ant-design/icons';
 import {Button} from 'antd';
-import axios from 'axios';
-import { FrownOutlined, HeartTwoTone, CheckCircleTwoTone } from '@ant-design/icons';
+import { FrownOutlined, HeartTwoTone, HeartFilled} from '@ant-design/icons';
 import controller3  from '../assets/controller3.svg';
 import controller4  from '../assets/controller4.svg';
 import { Link } from 'react-router-dom';
@@ -13,19 +12,27 @@ const { Meta } = Card;
 
 class Recommendation extends Component {
 
-      componentDidUpdate = () => {   
-        //this.getUser();
-      }
-
-      onClick = (e) => {
-        console.log(e);
-      }
-
     renderCards = (item) => { 
+        let isFav = false;
+        let favoriteGames = this.props.likedGames;
+         for (let i = 0; i < favoriteGames.length; i++) {
+             let game = favoriteGames[i];
+             if (game.productId === item.productId) {
+                 console.log("TURE");
+                 isFav = true;
+                 break;
+             }
+         }
+         let heartColor = isFav ? "red" : "#808080";
+
+         let onClickFunc = isFav ? this.props.unsetFavorite : this.props.setFavorite;
+
         console.log(item.rawProduct);
+        console.log(isFav);
+
         return (
         <Card className="Card"
-        style={{ width: 300,  }}
+        style={{ width: 300,}}
         cover={
         <img
             alt="example"
@@ -33,11 +40,11 @@ class Recommendation extends Component {
         />}
             actions={[
             <FrownOutlined color="#1890FF" key="setting" />,
-            <HeartTwoTone 
+            <HeartTwoTone
                 data-product={item.rawProduct} 
-                twoToneColor="red" 
+                twoToneColor={heartColor} 
                 onClick={
-                  () => {this.props.setFavorite(item.rawProduct)}  
+                  () => {onClickFunc(item.rawProduct)}  
                 } />,
             <EllipsisOutlined key="ellipsis" />,
             ]}
@@ -86,9 +93,8 @@ class Recommendation extends Component {
                 <div className="GameRecommendation">
                 <img src={controller4} alt="icon" className="Controllers"/> Game Recommendation
                 </div>
-                <div className="RecommendationCards">
-               
-                {items.map(item => this.renderCards(item))}
+                <div className="RecommendationCards">    
+                    {items.map(item => this.renderCards(item))}
                 </div>
       
                 <Button type="primary" size = "large" className="MoreGameButton" onClick={this.props.getRecommendation}>Another Round</Button>

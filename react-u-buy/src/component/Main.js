@@ -32,12 +32,6 @@ class Main extends Component {
                 likedGames={this.props.likedGames}
             /> : <Redirect to = "/login"/>;
     }
-    // getRegister = () => {
-    //     console.log(this.props.data)
-    //     return <Register data={this.props.data}
-    //                   user={this.props.user}
-    //                   location={this.props.location}/> ;
-    // }
 
     getTagsSelection = () => {
         return  <TagsSelection
@@ -59,6 +53,8 @@ class Main extends Component {
                     tags={this.props.tags}
                     getRecommendation={this.props.getRecommendation}
                     setFavorite={this.props.setFavorite}
+                    unsetFavorite={this.props.unsetFavorite}
+                    likedGames={this.props.likedGames}
                 />;
     }
 

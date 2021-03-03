@@ -32,7 +32,6 @@ class App extends Component {
                     selectedTags:selectedTags,
             }
         );
-        console.log(this.state.user);
     }
 
     handleLogout = () => {
@@ -54,21 +53,37 @@ class App extends Component {
             this.setState(prevState => ({
                 selectedTags: [...prevState.selectedTags, tag]
               }));
-            console.log(this.state);
         } else {
             let tmpArray = [...this.state.selectedTags];
             tmpArray.splice(idx, 1);
             this.setState(prevState => ({
                 selectedTags: tmpArray
             }));
-            console.log(this.state);
         }
     }
 
     setFavorite = (rawProduct) => {
         const url = '/favorites/set_favorite?userId=433';
         axios.post(url, rawProduct)
-        .then(this.getLikedGames())
+        .then(() => {
+            this.getLikedGames();
+            console.log("set fav game");
+            console.log(this.state.likedGames);
+        })
+        .catch();
+    }
+
+    unsetFavorite = (rawProduct) => {
+        const url = 'favorites/unset_favorite?userId=433';
+        axios.post(url, rawProduct)
+        .then( () => {
+            this.getLikedGames();
+            console.log("unset fav game");
+            console.log(this.state.likedGames);
+        }
+           
+
+     )
         .catch();
     }
 
@@ -115,6 +130,7 @@ class App extends Component {
            .then(response => {
                const data = response.data.products.map((product) => {
                  return {
+                          "productId" : product.productId,  
                           "productName" : product.productName,
                           "purchaseURL"  :product.purchaseUrl,
                           "productDescription" :product.productDescription,
@@ -150,6 +166,7 @@ class App extends Component {
                const data = response.data.favorites.map((entry) => {
                  const product = entry.productId;
                  return {
+                          "productId" : product.productId,
                           "productName" : product.productName,
                           "purchaseURL"  : product.purchaseUrl,
                           "productDescription" : product.productDescription,
@@ -161,8 +178,6 @@ class App extends Component {
                  ...this.state, 
                 likedGames:data}
                );
-              console.log("App state");
-              console.log(this.state);
            })
            .catch(error => {
                console.log('err in fetch favorites -> ', error);
@@ -191,6 +206,7 @@ class App extends Component {
                        setFavorite={this.setFavorite}
                        likedGames={this.state.likedGames}
                        user={this.state.user}
+                       unsetFavorite={this.unsetFavorite}
                 />
             </div>
 
