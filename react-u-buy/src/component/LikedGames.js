@@ -14,41 +14,44 @@ class LikedGames extends Component {
     this.state = {likedGames: []};
   }
 
-  getLikedGames = () => {
-    const url = '/products?page=4&page_size=3';
-    axios.get(url)
-       .then(response => {
-           const data = response.data.products.map((product) => {
-             return {
-                      "productName" : product.productName,
-                      "purchaseURL"  :product.purchaseUrl,
-                      "productDescription" :"This is an awesome game, hope you like it!",
-                      "imageUrls" : product.imageUrls.split(","),
-                    }           
-           })
-           this.setState({
-             ...this.state, 
-            likedGames:data}
-           );
-          //  console.log(data);
-       })
-       .catch(error => {
-           console.log('err in fetch products -> ', error);
-       })
+  // getLikedGames = () => {
+  //   const url = '/favorites/user/433';
+  //   console.log("run liked games");
+  //   axios.get(url)
+  //      .then(response => {
+  //          console.log(response);
+  //          const data = response.data.favorites.map((entry) => {
+  //            const product = entry.productId;
+  //            return {
+  //                     "productName" : product.productName,
+  //                     "purchaseURL"  : product.purchaseUrl,
+  //                     "productDescription" : product.productDescription,
+  //                     "imageUrls" : product.imageUrls.split(","),
+  //                   }           
+  //          })
+  //          this.setState({
+  //            ...this.state, 
+  //           likedGames:data}
+  //          );
+  //         //  console.log(data);
+  //      })
+  //      .catch(error => {
+  //          console.log('err in fetch products -> ', error);
+  //      })
 
-  }
+  // }
 
-  componentDidMount = () => {
-    this.getLikedGames();
-  }
+  // componentDidMount = () => {
+  //   this.getLikedGames();
+  // }
 
   render() {
-        const data = this.state.likedGames;
-
+        const data = this.props.likedGames;
+        console.log(data);
         return (
             <div className='LikedGames'>
                 <div className='LikedGamesTop'>
-                  <div> <img src={arrow} alt="icon"/> <Link to="/about">Back to game recommendation</Link> </div>
+                  <div> <img src={arrow} alt="icon"/> <Link to="/recommendation">Back to game recommendation</Link> </div>
                   <div className='LikedGamesTitle'>
                      <img src={gameBoy} alt="icon"/>
                     <div>Liked Game List</div>

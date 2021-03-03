@@ -5,9 +5,9 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
     app.use(
-        "/genres",
+        "/tag_types",
         createProxyMiddleware({
-            target: "http://localhost:9999",
+            target: "http://optubuy.us-east-2.elasticbeanstalk.com",
             changeOrigin: true,
             logLevel: "debug",
         })
@@ -15,7 +15,7 @@ module.exports = function(app) {
    app.use(
        "/products",
        createProxyMiddleware({
-           target: "http://localhost:9999",
+           target: "http://optubuy.us-east-2.elasticbeanstalk.com",
            changeOrigin: true,
            logLevel: "debug",
        })
@@ -30,6 +30,14 @@ module.exports = function(app) {
     );
     app.use(
         "/user",
+        createProxyMiddleware({
+            target: "http://optubuy.us-east-2.elasticbeanstalk.com",
+            changeOrigin: true,
+            logLevel: "debug",
+        })
+    );
+    app.use(
+        "/favorites",
         createProxyMiddleware({
             target: "http://optubuy.us-east-2.elasticbeanstalk.com",
             changeOrigin: true,
