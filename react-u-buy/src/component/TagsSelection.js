@@ -71,6 +71,15 @@ class TagsSelection extends Component {
                 </Tag>    
         )}}
 
+        setTagsAtServer = () => {
+            axios.post('/user/433', 
+                this.state.selectedTags
+            ).then(response => {
+                console.log(response);
+            })
+            .catch();    
+        }
+
     render() {
         const {tags} = this.state;
         return (
@@ -89,7 +98,9 @@ class TagsSelection extends Component {
                     }
                 <div className="recommendBtnContainer">
                 <Link className="recommendBtn" to="/recommendation">
-                    <button className="recommendBtn">Recommend!</button>
+                    <button className="recommendBtn" onClick={this.setTagsAtServer}>
+                        Recommend!
+                    </button>
                 </Link>
                     </div> 
                 </div>

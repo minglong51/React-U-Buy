@@ -15,6 +15,9 @@ class Recommendation extends Component {
 
     state = {
         recommendedGame : [],
+        user: {},
+        tags:[],
+        colors: ["blue", "yellow", "orange", "magenta","green", "purple"],
     }
     getRecommendation = () => {
         const url = '/products?page=4&page_size=3';
@@ -37,9 +40,33 @@ class Recommendation extends Component {
                console.log('err in fetch products -> ', error);
            })
       }
+
+      getUser = () => {
+        const url = '/user/433';
+        axios.get(url)
+           .then(response => {
+               const user = response.data.user;
+
+               const splitTags = user.tags.split(",");
+           
+               this.setState({
+                 ...this.state, 
+                 user:user,
+                 tags: splitTags}
+               );
+           })
+           .catch(error => {
+               console.log('err in fetch products -> ', error);
+           })
+      }
     
       componentDidMount = () => {
         this.getRecommendation();
+        this.getUser();
+      }
+
+      componentDidUpdate = () => {   
+        //this.getUser();
       }
 
     renderCards = (item) => { return (  
@@ -65,10 +92,22 @@ class Recommendation extends Component {
 
     )}
 
+    renderTags = (item, idx) => { 
+        const {colors} = this.state;
+        const color = colors[ idx % colors.length];
+        if (item !== "EMPTY") {
+            return (  
+                <Tag key={item} color={color} 
+                    data-tag={item} 
+                    className="RecommendationTag"
+                >
+                        {item}
+                </Tag>    
+     )}}
+
     render() {
-        // console.log(this.state.recommendedGame);
         const items = this.state.recommendedGame;
-        
+        const tags = this.state.tags;
         return (
             
             <div className="Recommendation">
@@ -76,10 +115,10 @@ class Recommendation extends Component {
                     <img src={controller3} alt="icon"/> Game Preference
                 </div>
                 <div className="RecommendationHeaderTags">
-                    
-                    <Tag color="magenta" className="RecommendationTag">First Person Shooter</Tag>
-                    <Tag color="blue" className="RecommendationTag">Party</Tag>
-                    <Tag color="yellow" className="RecommendationTag">Collaborate</Tag>
+
+                    {
+                        tags.map((tag, idx) => this.renderTags(tag, idx))
+                    }
 
                     <span className="Edit">
                         <Link to="/tags" className="Edit">Edit</Link>

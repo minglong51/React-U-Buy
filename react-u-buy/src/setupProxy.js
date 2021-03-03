@@ -28,5 +28,13 @@ module.exports = function(app) {
             logLevel: "debug",
         })
     );
+    app.use(
+        "/user",
+        createProxyMiddleware({
+            target: "http://optubuy.us-east-2.elasticbeanstalk.com",
+            changeOrigin: true,
+            logLevel: "debug",
+        })
+    );
 
 }
