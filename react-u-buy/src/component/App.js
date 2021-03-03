@@ -17,17 +17,22 @@ class App extends Component {
         recommendedGames: [],
         tags:[],
         likedGames:[],
+        user:{},
     };
 
     handleLoginSucceed = (user) => {
 
-
+        this.getRecommendation();
+        this.getLikedGames();
+        let selectedTags = user.tags.split(",");
         this.setState(
             { isLoggedIn: true,
                     userId: user.userId,
+                    user:user,
+                    selectedTags:selectedTags,
             }
         );
-        console.log(this.state.userId);
+        console.log(this.state.user);
     }
 
     handleLogout = () => {
@@ -36,10 +41,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        // this.getGameFromDb();
         this.getTags();
-        this.getRecommendation();
-        this.getLikedGames();
     }
 
     componentWillUnmount() {
@@ -188,6 +190,7 @@ class App extends Component {
                        recommendedGames={this.state.recommendedGames}
                        setFavorite={this.setFavorite}
                        likedGames={this.state.likedGames}
+                       user={this.state.user}
                 />
             </div>
 
