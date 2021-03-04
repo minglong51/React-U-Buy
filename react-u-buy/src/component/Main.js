@@ -62,6 +62,8 @@ class Main extends Component {
                     addBlackList={this.props.addBlackList}
                     removeBlackList={this.props.removeBlackList}
                     blackListGames={this.props.blackListGames}
+                    offset={this.props.offset}
+                    moveRecommendationOffset={this.props.moveRecommendationOffset}
                 />;
     }
 

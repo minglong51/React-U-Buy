@@ -36,7 +36,7 @@ class TagsSelection extends Component {
 
                 <div>
                     {   
-                        this.props.tags.map((tag, idx) => this.renderTags(tag, idx))
+                       tags.map((tag, idx) => this.renderTags(tag, idx))
                     }
                 <div className="recommendBtnContainer">
                 <Link className="recommendBtn" to="/recommendation">

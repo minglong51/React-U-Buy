@@ -93,7 +93,9 @@ class Recommendation extends Component {
     }
 
     render() {
-        const items = this.props.recommendedGames;
+        
+        let items = this.props.recommendedGames.slice(this.props.offset, this.props.offset + 3);
+        console.log(items);
         const tags = this.props.selectedTags;
         return (
 
@@ -118,7 +120,7 @@ class Recommendation extends Component {
                     {items.map(item => this.renderCards(item))}
                 </div>
 
-                <Button type="primary" size="large" className="MoreGameButton" onClick={this.props.getRecommendation}>Another Round</Button>
+                <Button type="primary" size="large" className="MoreGameButton" onClick={this.props.moveRecommendationOffset}>Another Round</Button>
 
             </div>
         );

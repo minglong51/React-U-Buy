@@ -18,6 +18,7 @@ class App extends Component {
         likedGames: [],
         user: {},
         blackListGames:[],
+        offset: 0,
     };
 
     handleLoginSucceed = (user) => {
@@ -153,10 +154,10 @@ class App extends Component {
     }
 
     getRecommendation = () => {
-        const url = '/products?page=4&page_size=3';
+        const url = `/recommend/${this.state.userId}`;
         axios.get(url)
             .then(response => {
-                const data = response.data.products.map((product) => {
+                const data = response.data.recommended_products.map((product) => {
                     return {
                         "productId": product.productId,
                         "productName": product.productName,
@@ -177,13 +178,43 @@ class App extends Component {
             })
     }
 
+    moveRecommendationOffset = () => {
+        this.setState(prevState => {
+           let newOffset = prevState.offset + 3 >= prevState.recommendedGames.length ? 0 : prevState.offset + 3;
+           return {...prevState, offset : newOffset}
+        })
+        console.log("offset" + this.state.offset);
+    }
+
+    getUserTag = () => {
+        const url = `/user/${this.state.userId}`;
+        axios.get(url)
+            .then(response => {
+                const user = response.data.user;
+
+                const splitTags = user.tags.split(",");
+                console.log("server selected tags");
+                console.log(splitTags);
+                this.setState({
+                    ...this.state,
+                    selectedTags: splitTags
+                }
+                );
+            })
+            .catch(error => {
+                console.log('err in fetch products -> ', error);
+            })
+    }
+
     setTagsAtServer = () => {
+        console.log(this.state.selectedTags);
         axios.post(`/user/${this.state.userId}`,
             this.state.selectedTags
         ).then(response => {
             console.log(response);
-        })
-            .catch();
+            this.getUserTag();
+            this.getRecommendation();
+        }).catch();
     }
 
     getLikedGames = () => {
@@ -269,6 +300,8 @@ class App extends Component {
                     addBlackList={this.addBlackList}
                     removeBlackList={this.removeBlackList}
                     blackListGames={this.state.blackListGames}
+                    offset={this.state.offset}
+                    moveRecommendationOffset={this.moveRecommendationOffset}
                 />
             </div>
 
