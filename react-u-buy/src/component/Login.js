@@ -106,7 +106,7 @@ class NormalLoginForm extends Component {
 
                         </div> :
                         <div className="login_box">
-                            <Register/>
+                            <Register handleLoginSucceed={this.props.handleLoginSucceed}/>
                         </div>}
 
                     <div className={"quick-sign-in-box"}>
