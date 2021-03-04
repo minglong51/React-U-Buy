@@ -18,3 +18,17 @@
     font-size: xx-large;
     font-weight: bold;
 }
+
+.Fire {
+    margin-left: 1%;
+
+}
+
+.Remove {
+  color: "#f2f2f2";
+}
+
+.Title {
+    position: relative;
+
+}

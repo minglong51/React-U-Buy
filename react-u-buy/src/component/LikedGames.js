@@ -1,11 +1,11 @@
 import React, { useState, Component } from 'react';
 import 'antd/dist/antd.css';
-import { List, Tag } from 'antd';
+import { List, Tag, Divider } from 'antd';
 import axios from 'axios';
 import gameBoy from '../assets/gameBoy.svg';
 import arrow from '../assets/arrow.svg';
 import { Link } from 'react-router-dom';
-
+import { FireTwoTone, CloseOutlined, CloseCircleTwoTone } from '@ant-design/icons';
 
 
 class LikedGames extends Component {
@@ -14,21 +14,31 @@ class LikedGames extends Component {
     const { colors } = this.props;
     const color = colors[idx % colors.length];
     if (item !== "EMPTY" && item != "") {
-        return (
-            <Tag key={item} color={color}
-                data-tag={item}
-                className="RecommendationTag"
-            >
-                {item}
-            </Tag>
-        )
+      return (
+        <Tag key={item} color={color}
+          data-tag={item}
+          className="RecommendationTag"
+        >
+          {item}
+        </Tag>
+      )
     }
-}
+  }
+
+  fire = (text) => {
+    return (
+      <span className = "Fire">
+         <Divider type="vertical" />
+        <FireTwoTone twoToneColor="red" /> {text}
+      </span>
+    )
+  }
+
 
   render() {
     const data = this.props.likedGames;
     console.log(data);
-    let test =["FPS", "Action"];
+    let test = ["FPS", "Action"];
     return (
       <div className='LikedGames'>
         <div className='LikedGamesTop'>
@@ -54,6 +64,14 @@ class LikedGames extends Component {
           }}
           renderItem={item => (
             <List.Item
+              // actions={[
+              //   <div className="Actions">
+              //     {React.createElement(StarOutlined)}
+              //     {" " + item.rawProduct.item.averageRating + "%"}
+              //     <Divider type="vertical" />
+              //   </div>,
+
+              // ]}
               extra={
                 <img
                   width={298}
@@ -64,12 +82,21 @@ class LikedGames extends Component {
             >
 
               <List.Item.Meta
-                title={<a target="_blank" href={item.purchaseURL}>{item.productName}</a>}
+                title={
+                <div className="Title">
+                  <a target="_blank" href={item.purchaseURL}>{item.productName }</a> 
+                  {this.fire(item.rawProduct.item.averageRating)}
+                  <Divider type="vertical" />
+                  <CloseCircleTwoTone  
+                    twoToneColor="#C8C8C8" 
+                    onClick={
+                      () => {this.props.unsetFavorite(item.rawProduct) }
+                  }/>
+                </div>
+                }
                 description={item.productDescription}
-
               />
               {item.content}
-            Average Rating: {item.rawProduct.item.averageRating}
             </List.Item>
           )}
         />
