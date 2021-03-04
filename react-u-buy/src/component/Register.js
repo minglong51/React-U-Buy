@@ -21,7 +21,7 @@ class NormalRegisterForm extends Component {
                         username: values.username,
                         password: values.password,
                         email:values.email,
-                        photoUrl:"https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860-dragon-header-iStock-494839519.gif",
+                        photoUrl:"https://www.dogtime.com/assets/uploads/2011/03/puppy-development-1280x720.jpg",
                         tags:"EMPTY",
                     }),
                 })

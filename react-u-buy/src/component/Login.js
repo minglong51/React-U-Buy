@@ -68,7 +68,7 @@ class NormalLoginForm extends Component {
 
                 <div className={"login-register-box"}>
 
-                    <Tabs className={"tabs-top"} defaultActiveKey="1" onChange={this.handleLogin}>
+                    <Tabs className={"tabs-top"} defaultActiveKey="1" onChange={this.handleLogin} centered style={{"margin-left":60}}>
                         <TabPane tab="login" className={"login_tab"} key={"1"}></TabPane>
                         <TabPane tab="signup" className={"register_tab"} key={"2"}></TabPane>
                     </Tabs>

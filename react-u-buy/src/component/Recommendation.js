@@ -131,7 +131,7 @@ class Recommendation extends Component {
                     {items.map(item => this.renderCards(item))}
                 </div>
 
-                <Button type="primary" size="large" className="MoreGameButton" onClick={this.props.moveRecommendationOffset}>Another Round</Button>
+                <Button type="primary" size="large" className="MoreGameButton" onClick={this.props.moveRecommendationOffset}>Next 3</Button>
 
             </div>
         );
