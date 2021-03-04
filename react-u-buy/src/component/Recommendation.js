@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { Tag } from 'antd'
 import { Card, Avatar } from 'antd';
 import { EllipsisOutlined } from '@ant-design/icons';
-import { Button } from 'antd';
+import { Button, Popover, Divider } from 'antd';
 import { HeartTwoTone, FrownTwoTone } from '@ant-design/icons';
 import controller3 from '../assets/controller3.svg';
 import controller4 from '../assets/controller4.svg';
@@ -64,9 +64,20 @@ class Recommendation extends Component {
                         onClick={
                             () => { onClickFuncHeart(item.rawProduct) }
                         } />,
-                    <EllipsisOutlined key="ellipsis" />,
+                        <Popover 
+                            overlayStyle={{ width: 400}}
+                            content={
+                                <div>
+                                    <p style={{color:"#3C3C3E", "font-eight":900}}>{item.productName}</p>
+                                    <Divider type="horizontal" />
+                                    <p>{item.productDescription}</p>
+                                    <p>Average rating: {item.rawProduct.item.averageRating}</p>
+                                </div>}
+                        >
+                            <EllipsisOutlined key="ellipsis" />
+                        </Popover>,
                 ]}
-                title={item.productName}
+                title={<Popover content={item.productName}>{item.productName}</Popover>}
                 key={item.productName}
             >
                 <Meta
