@@ -1,5 +1,9 @@
 .login-register-page{
-    background: #F4F6F7;
+    position: relative;
+    width: 1440px;
+    height: 900px;
+
+    background: #F8F6FF;
 }
 
 .login-register-subtitle{

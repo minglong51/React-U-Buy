@@ -304,11 +304,11 @@
     left: calc(50% - 360px/2 - 280px + 403px + 24px + 210px);
     top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px + 68px + 68px);
 
-    font-family: Roboto;
+    font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 22px;
+    line-height: 20px;
     /* or 110% */
 
     display: flex;

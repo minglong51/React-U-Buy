@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4b3b3b4-2c4a-42ec-8f37-4835e04a7e7e" name="Default Changelist" comment="" />
+    <list default="true" id="b4b3b3b4-2c4a-42ec-8f37-4835e04a7e7e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/styles/UserProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/styles/UserProfile.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,24 +140,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/react-u-buy/src/component/Main.js</url>
-          <line>41</line>
+          <line>39</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/react-u-buy/src/component/LikedGames.js</url>
-          <line>16</line>
+          <line>12</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/react-u-buy/src/component/LikedGames.js</url>
-          <line>20</line>
+          <line>16</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/react-u-buy/src/component/LikedGames.js</url>
-          <line>28</line>
+          <line>24</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
