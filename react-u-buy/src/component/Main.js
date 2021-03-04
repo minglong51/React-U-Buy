@@ -34,6 +34,7 @@ class Main extends Component {
                 user={this.props.user}
                 location={this.props.location}
                 likedGames={this.props.likedGames}
+                colors={this.props.colors}
             /> : <Redirect to = "/login"/>;
     }
 

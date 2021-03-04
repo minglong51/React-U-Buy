@@ -1,6 +1,6 @@
 import React, { useState, Component } from 'react';
 import 'antd/dist/antd.css';
-import { List, Avatar } from 'antd';
+import { List, Tag } from 'antd';
 import axios from 'axios';
 import gameBoy from '../assets/gameBoy.svg';
 import arrow from '../assets/arrow.svg';
@@ -10,9 +10,25 @@ import { Link } from 'react-router-dom';
 
 class LikedGames extends Component {
 
+  renderTags = (item, idx) => {
+    const { colors } = this.props;
+    const color = colors[idx % colors.length];
+    if (item !== "EMPTY" && item != "") {
+        return (
+            <Tag key={item} color={color}
+                data-tag={item}
+                className="RecommendationTag"
+            >
+                {item}
+            </Tag>
+        )
+    }
+}
+
   render() {
     const data = this.props.likedGames;
     console.log(data);
+    let test =["FPS", "Action"];
     return (
       <div className='LikedGames'>
         <div className='LikedGamesTop'>
@@ -53,6 +69,7 @@ class LikedGames extends Component {
 
               />
               {item.content}
+            Average Rating: {item.rawProduct.item.averageRating}
             </List.Item>
           )}
         />
