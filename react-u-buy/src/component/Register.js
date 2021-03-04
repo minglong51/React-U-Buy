@@ -36,8 +36,14 @@ class NormalRegisterForm extends Component {
                     })
                     .then((data) => {
 
-
+                       let registerUser={ userId:null,
+                            username: values.username,
+                            password: values.password,
+                            email:values.email,
+                            photoUrl:"https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860-dragon-header-iStock-494839519.gif",
+                            tags:"EMPTY"};
                         message.success('Register succeed!');
+                        this.props.handleLoginSucceed(registerUser);
 
                         //step4: 登录成功，保存token -> 用于实现持久登录
                     })

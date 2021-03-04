@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b3b3b4-2c4a-42ec-8f37-4835e04a7e7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/react-u-buy/src/styles/UserProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/styles/UserProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-u-buy/src/component/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-u-buy/src/component/Register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
