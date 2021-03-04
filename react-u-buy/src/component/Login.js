@@ -109,7 +109,7 @@ class NormalLoginForm extends Component {
                             <Register/>
                         </div>}
 
-                    <div className={"quick-sign-in-box"}>
+                    {/* <div className={"quick-sign-in-box"}>
                         <div className={"quick-sign-in"}>Quick Sign-in</div>
                         <div className={"quick-sign-in-icon"}>
 
@@ -118,7 +118,7 @@ class NormalLoginForm extends Component {
                             <WeiboCircleOutlined/>
                         </div>
                         <button className={"sign-up-button"}>Sign Up</button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );
