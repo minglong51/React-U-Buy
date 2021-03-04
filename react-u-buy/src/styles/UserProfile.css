@@ -201,11 +201,11 @@
     color: #7B64D8;
 }
 
-.user_profile_text_password{
+.user_profile_text_join_date{
     position: absolute;
     width: 125px;
     height: 22px;
-    left: calc(50% - 360px/2 - 280px + 403px + 24px);
+    left: calc(50% - 360px/2 - 280px + 403px + 17px);
     top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px + 68px);
 
     font-family: Poppins;
@@ -277,11 +277,11 @@
     color: rgba(0, 0, 0, 0.85);
 }
 
-.user_profile_password{
+.user_profile_join_date{
     position: absolute;
     width: 125px;
     height: 22px;
-    left: calc(50% - 360px/2 - 280px + 403px + 24px + 130px);
+    left: calc(50% - 360px/2 - 280px + 403px + 24px + 115px);
     top: calc(50% - 334px/2 - 00px + 9px - 4px + 68px + 68px);
 
     font-family: Poppins;

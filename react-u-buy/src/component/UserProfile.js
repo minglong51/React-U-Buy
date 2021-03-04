@@ -51,12 +51,12 @@ class UserProfile extends Component {
 
                     <p className={"user_profile_text_name"}>User Name:</p>
                     <p className={"user_profile_text_email"}>Email Address:</p>
-                    <p className={"user_profile_text_password"}>Join Date:</p>
+                    <p className={"user_profile_text_join_date"}>Join Date:</p>
                     <p className={"user_profile_text_game"}>Game Preference:</p>
 
                     <p className={"user_profile_name"}>{data.username}</p>
                     <p className={"user_profile_email"}>{data.email}</p>
-                    <p className={"user_profile_password"}>2021-03-01</p>
+                    <p className={"user_profile_join_date"}>2021-03-01</p>
                     <Link className={"user_profile_game"} to="/tags">Edit</Link>
 
                     <div className="ProfileTags">
