@@ -12,18 +12,12 @@ class NormalLoginForm extends Component {
         hasSignUp: true
     };
     handleLogin = e => {
-        // e.preventDefault();
         this.setState(pre => ({
             hasSignUp: !pre.hasSignUp
         }))
 
     }
-    // handleRegister=e=>{
-    //     e.preventDefault();
-    //     this.setState(pre=>({
-    //         hasSignUp:!pre.hasSignUp
-    //     }))
-    // }
+
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
@@ -37,7 +31,8 @@ class NormalLoginForm extends Component {
                     body: formData
                 })
                     .then((response) => {
-                        //console.log(response)
+                        console.log("log in");
+                        console.log(response)
                         if (response.ok) {
                             return response.json();
                         } else {

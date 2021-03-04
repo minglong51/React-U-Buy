@@ -13,7 +13,11 @@ class Main extends Component {
 
     getLogin = () => {
         return this.props.isLoggedIn ?
-            <Redirect to="/tags"/> : <Login handleLoginSucceed={this.props.handleLoginSucceed}/>;
+            <Redirect to="/tags"/> : 
+            <Login 
+                handleLoginSucceed={this.props.handleLoginSucceed}
+                isLoggedIn={this.props.isLoggedIn}
+            />;
     }
     // getMachine = () => {
     //     console.log(this.props.data)
@@ -32,12 +36,6 @@ class Main extends Component {
                 likedGames={this.props.likedGames}
             /> : <Redirect to = "/login"/>;
     }
-    // getRegister = () => {
-    //     console.log(this.props.data)
-    //     return <Register data={this.props.data}
-    //                   user={this.props.user}
-    //                   location={this.props.location}/> ;
-    // }
 
     getTagsSelection = () => {
         return  <TagsSelection
@@ -59,12 +57,24 @@ class Main extends Component {
                     tags={this.props.tags}
                     getRecommendation={this.props.getRecommendation}
                     setFavorite={this.props.setFavorite}
+                    unsetFavorite={this.props.unsetFavorite}
+                    likedGames={this.props.likedGames}
+                    addBlackList={this.props.addBlackList}
+                    removeBlackList={this.props.removeBlackList}
+                    blackListGames={this.props.blackListGames}
+                    offset={this.props.offset}
+                    moveRecommendationOffset={this.props.moveRecommendationOffset}
                 />;
     }
 
     getUserProfile=()=>{
         console.log(this.props.userId);
-        return <UserProfile userId={this.props.userId}/>;
+        return <UserProfile 
+                    userId={this.props.userId}
+                    user={this.props.user}
+                    selectedTags={this.props.selectedTags}
+                    colors={this.props.colors}
+                />;
     }
 
     getLandingPage = () => {
@@ -72,20 +82,23 @@ class Main extends Component {
     }
 
     render() {
+        let isLoggedIn = this.props.isLoggedIn;
         return (
             <div className="main">
                 <div className="Component">
-                <Switch>
-                    <Route path="/login&register" render={this.getLogin}/>
-                    {/*<Route path="/home" render={this.getMachine}/>*/}
-                    <Route path="/likedgames" render={this.getLikedGame}/>
-                    {/*<Route path="/register" render={this.getRegister}/>*/}
-                    <Route path="/tags" render={this.getTagsSelection}/>
-                    <Route path="/recommendation" render={this.getRecommendation}/>
-                    <Route path="/profile" render={this.getUserProfile}/>
-                    <Route path="/landing" render={this.getLandingPage}/>
-                    <Route path="/" render={this.getLogin}/>
-                </Switch>
+                    {!isLoggedIn && 
+                        <Route path="/" render={this.getLogin}/>}
+                    { isLoggedIn &&
+                        <Switch>
+                            <Route path="/login&register" render={this.getLogin}/>
+                            <Route path="/likedgames" render={this.getLikedGame}/>
+                            <Route path="/tags" render={this.getTagsSelection}/>
+                            <Route path="/recommendation" render={this.getRecommendation}/>
+                            <Route path="/profile" render={this.getUserProfile}/>
+                            <Route path="/landing" render={this.getLandingPage}/>
+                            <Route path="/" render={this.getTagsSelection}/>
+                        </Switch>
+                    }
                 </div>
                
                 {this.props.isLoggedIn ? <div className="footnote">Opt-U-Buy Application, Mailing Address: dddmb@foxmail.com, Opt-U-Buy 2021 Project</div>:
