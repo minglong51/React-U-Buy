@@ -36,6 +36,7 @@ class App extends Component {
         this.getRecommendation();
         this.getLikedGames();
         this.getBlackListGames();
+        console.log(this.state);
         
     }
 

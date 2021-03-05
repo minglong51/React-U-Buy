@@ -68,7 +68,7 @@ class NormalLoginForm extends Component {
 
                 <div className={"login-register-box"}>
 
-                    <Tabs className={"tabs-top"} defaultActiveKey="1" onChange={this.handleLogin}>
+                    <Tabs className={"tabs-top"} defaultActiveKey="1" onChange={this.handleLogin} centered style={{"margin-left":60}}>
                         <TabPane tab="login" className={"login_tab"} key={"1"}></TabPane>
                         <TabPane tab="signup" className={"register_tab"} key={"2"}></TabPane>
                     </Tabs>
@@ -109,7 +109,7 @@ class NormalLoginForm extends Component {
                             <Register handleLoginSucceed={this.props.handleLoginSucceed}/>
                         </div>}
 
-                    <div className={"quick-sign-in-box"}>
+                    {/* <div className={"quick-sign-in-box"}>
                         <div className={"quick-sign-in"}>Quick Sign-in</div>
                         <div className={"quick-sign-in-icon"}>
 
@@ -118,7 +118,7 @@ class NormalLoginForm extends Component {
                             <WeiboCircleOutlined/>
                         </div>
                         <button className={"sign-up-button"}>Sign Up</button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );

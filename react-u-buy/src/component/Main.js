@@ -34,6 +34,7 @@ class Main extends Component {
                 user={this.props.user}
                 location={this.props.location}
                 likedGames={this.props.likedGames}
+                unsetFavorite={this.props.unsetFavorite}
             /> : <Redirect to = "/login"/>;
     }
 
@@ -101,7 +102,7 @@ class Main extends Component {
                     }
                 </div>
                
-                {this.props.isLoggedIn ? <div className="footnote">Opt-U-Buy Application, Mailing Address: dddmb@foxmail.com, Opt-U-Buy 2021 Project</div>:
+                {this.props.isLoggedIn ? <div className="footnote">Opt-U-Buy Application | Bringing happiness, one game at a time ♥ | Since 2021 </div>:
                     <div></div>}
             </div>
         );

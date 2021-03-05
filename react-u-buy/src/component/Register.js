@@ -21,7 +21,7 @@ class NormalRegisterForm extends Component {
                         username: values.username,
                         password: values.password,
                         email:values.email,
-                        photoUrl:"https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860-dragon-header-iStock-494839519.gif",
+                        photoUrl:"https://i.pinimg.com/originals/d4/3f/75/d43f75fc3d2f128cf528a4802aafd6f2.jpg",
                         tags:"EMPTY",
                     }),
                 })
@@ -43,7 +43,12 @@ class NormalRegisterForm extends Component {
                             photoUrl:"https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860-dragon-header-iStock-494839519.gif",
                             tags:"EMPTY"};
                         message.success('Register succeed!');
-                        this.props.handleLoginSucceed(registerUser);
+
+                        console.log(data);
+                        this.props.handleLoginSucceed(data.user);
+
+                        //this.props.handleLoginSucceed(registerUser);
+
 
                         //step4: 登录成功，保存token -> 用于实现持久登录
                     })
