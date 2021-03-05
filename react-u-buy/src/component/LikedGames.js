@@ -34,11 +34,25 @@ class LikedGames extends Component {
     )
   }
 
+  renderTags = (item, idx) => {
+
+    if (item !== "EMPTY" && item != "") {
+        return (
+            <Tag key={item} 
+                data-tag={item}
+                className="LikedGameTag"
+            >
+                {item}
+            </Tag>
+        )
+    }
+  } 
+
 
   render() {
     const data = this.props.likedGames;
     console.log(data);
-    let test = ["FPS", "Action"];
+   
     return (
       <div className='LikedGames'>
         <div className='LikedGamesTop'>
@@ -63,6 +77,7 @@ class LikedGames extends Component {
             pageSize: 5,
           }}
           renderItem={item => (
+            
             <List.Item
               // actions={[
               //   <div className="Actions">
@@ -94,9 +109,11 @@ class LikedGames extends Component {
                   }/>
                 </div>
                 }
-                description={item.productDescription}
+                description={<div>
+                  {item.rawProduct.item.popularTags.split(",").map((tag, idx) => this.renderTags(tag, idx))}
+                </div>}
               />
-              {item.content}
+              {item.productDescription}
             </List.Item>
           )}
         />
